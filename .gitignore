@@ -4,3 +4,11 @@ CS5375_Computer_Systems_Organization_and_Architecture_Projects.workspace
 .codelite/CS5375_Computer_Systems_Organization_and_Architecture_Projects.workspace.steph
 .codelite/CS5375_Computer_Systems_Organization_and_Architecture_Projects.session
 .codelite/CS5375_Computer_Systems_Organization_and_Architecture_Projects-steph.tags
+build-Debug/bin/Project1_Cache_Simulator.exe
+build-Debug/Project1_Cache_Simulator/.d
+build-Debug/Project1_Cache_Simulator/cachesim.c.o.d
+build-Debug/Project1_Cache_Simulator/ObjectsList.txt
+build-Debug/Project1_Cache_Simulator/cachesim.c.o
+Makefile
+Project1_Cache_Simulator/compile_flags.txt
+Project1_Cache_Simulator/Project1_Cache_Simulator.mk
