@@ -1,0 +1,53 @@
+Simulating Direct Mapped Cache on tracefile 'hw5_memoryaddr'
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    58%
+Cache Miss Rate:   41%
+
+
+
+Simulating Direct Mapped Cache on tracefile 'trace.stream_10'
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0%
+Cache Miss Rate:   100%
+
+
+
+Simulating Direct Mapped Cache on tracefile 'trace.stream_20'
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    20%
+Cache Miss Rate:   80%
+
+
+
+Simulating Direct Mapped Cache on tracefile 'trace.stream'
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    1059918
+Cache Misses:  2174137
+Cache Hit Rate:    32%
+Cache Miss Rate:   67%
+
+
+
+Simulating Direct Mapped Cache on tracefile 'trace.hpcg'
+==================================
+Cache type:    Direct-Mapped Cache
+==================================
+Cache Hits:    1301327
+Cache Misses:  198673
+Cache Hit Rate:    86%
+Cache Miss Rate:   13%
+
