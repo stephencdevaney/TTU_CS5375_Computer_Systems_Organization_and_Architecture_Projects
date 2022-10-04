@@ -1,0 +1,4 @@
+        printf("Usage: %s <direct> <options> <trace file name>\n", argv[0]);
+        printf("Help Usage 1: %s --help", argv[0]);
+        printf("Help Usage 2: %s --h", argv[0]);
+        return 1;

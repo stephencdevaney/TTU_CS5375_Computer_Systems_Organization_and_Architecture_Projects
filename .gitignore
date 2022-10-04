@@ -12,3 +12,11 @@ build-Debug/Project1_Cache_Simulator/cachesim.c.o
 Makefile
 Project1_Cache_Simulator/compile_flags.txt
 Project1_Cache_Simulator/Project1_Cache_Simulator.mk
+build-Debug/CmdLineArgsTest/.d
+build-Debug/CmdLineArgsTest/main.c.o
+build-Debug/CmdLineArgsTest/main.c.o.d
+build-Debug/CmdLineArgsTest/ObjectsList.txt
+CmdLineArgsTest/CmdLineArgsTest.mk
+CmdLineArgsTest/CmdLineArgsTest.project
+CmdLineArgsTest/compile_flags.txt
+CmdLineArgsTest/main.exe
