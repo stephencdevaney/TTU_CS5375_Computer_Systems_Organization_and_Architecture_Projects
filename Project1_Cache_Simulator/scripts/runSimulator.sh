@@ -38,50 +38,46 @@ if test -f "./cachesim.exe"; then
 
 
 	# Runs a direct mapped cache if RUN_DIRECT_MAPPED is true.
-	if [[ $RUN_DIRECT_MAPPED == true ]] ; then
+	if [[ $RUN_DIRECT_MAPPED == true ]] ; then	
 		#Test the Direct Mapped Cache for all trace files and place all output into one output file
-		#echo -e "Simulating Direct Mapped Cache on tracefile 'hw5_memoryaddr'" > CachesimOutput/direct_mapped_output.txt
-		#./cachesim.exe direct trace_for_students/hw5_memoryaddr >> CachesimOutput/direct_mapped_output.txt
-		#echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_10'" >> CachesimOutput/direct_mapped_output.txt
-		#./cachesim.exe direct trace_for_students/trace.stream_10 >> CachesimOutput/direct_mapped_output.txt
-		#echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_20'" >> CachesimOutput/direct_mapped_output.txt
-		#./cachesim.exe direct trace_for_students/trace.stream_20 >> CachesimOutput/direct_mapped_output.txt
-		#echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream'" >> CachesimOutput/direct_mapped_output.txt
-		#./cachesim.exe direct trace_for_students/trace.stream >> CachesimOutput/direct_mapped_output.txt
-		#echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.hpcg'" >> CachesimOutput/direct_mapped_output.txt
-		#./cachesim.exe direct trace_for_students/trace.hpcg >> CachesimOutput/direct_mapped_output.txt
+		echo -e "Simulating Direct Mapped Cache on tracefile 'hw5_memoryaddr'" > CachesimOutput/direct_mapped_output.txt
+		./cachesim.exe direct trace_for_students/hw5_memoryaddr >> CachesimOutput/direct_mapped_output.txt
+		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_10'" >> CachesimOutput/direct_mapped_output.txt
+		./cachesim.exe direct trace_for_students/trace.stream_10 >> CachesimOutput/direct_mapped_output.txt
+		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_20'" >> CachesimOutput/direct_mapped_output.txt
+		./cachesim.exe direct trace_for_students/trace.stream_20 >> CachesimOutput/direct_mapped_output.txt
+		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream'" >> CachesimOutput/direct_mapped_output.txt
+		./cachesim.exe direct trace_for_students/trace.stream >> CachesimOutput/direct_mapped_output.txt
+		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.hpcg'" >> CachesimOutput/direct_mapped_output.txt
+		./cachesim.exe direct trace_for_students/trace.hpcg >> CachesimOutput/direct_mapped_output.txt
 	fi
 
 
 	# Runs a N-Way Associative Cache if RUN_NWAY_ASSOCIATIVE is true.
-	if [[ RUN_NWAY_ASSOCIATIVE == true ]] ; then
-		#Test the Direct Mapped Cache for all trace files and place all output into one output file
-		echo -e "Simulating Direct Mapped Cache on tracefile 'hw5_memoryaddr'" > CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/hw5_memoryaddr >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_10'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream_10 >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_20'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream_20 >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.hpcg'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.hpcg >> CachesimOutput/direct_mapped_output.txt
+	if [[ $RUN_NWAY_ASSOCIATIVE == true ]] ; then
+                line_size=(16 32 128)
+                for i in ${!line_size[@]}; do
+                        echo ${line_size[$i]}
+                done
+
+                cache_size=(16384 32768 65536)
+                for i in ${!cache_size[@]}; do
+                        echo ${cache_size[$i]}
+                done
 	fi
 
 
 	# Runs a FULLY Associative Cache if RUN_FULLY_ASSOCIATIVE is true.
-	if [[ RUN_FULLY_ASSOCIATIVE == true ]] ; then
-		#Test the Direct Mapped Cache for all trace files and place all output into one output file
-		echo -e "Simulating Direct Mapped Cache on tracefile 'hw5_memoryaddr'" > CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/hw5_memoryaddr >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_10'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream_10 >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_20'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream_20 >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.hpcg'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.hpcg >> CachesimOutput/direct_mapped_output.txt
+	if [[ $RUN_FULLY_ASSOCIATIVE == true ]] ; then
+                line_size=(16 32 128)
+                for i in ${!line_size[@]}; do
+                        echo ${line_size[$i]}
+                done
+
+                cache_size=(16384 32768 65536)
+                for i in ${!cache_size[@]}; do
+                        echo ${cache_size[$i]}
+                done
 	fi
 
 
