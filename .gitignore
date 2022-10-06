@@ -20,3 +20,6 @@ CmdLineArgsTest/CmdLineArgsTest.mk
 CmdLineArgsTest/CmdLineArgsTest.project
 CmdLineArgsTest/compile_flags.txt
 CmdLineArgsTest/main.exe
+build-Debug/bin/CmdLineArgsTest.exe
+Project1_Cache_Simulator/cachesim.exe
+build-Debug/bin/CmdLineArgsTest.exe
