@@ -257,7 +257,7 @@ void printHelp(char *argv){
 
 void printFinalOutput(struct cache_t *cache){
     // output cache type and information
-    printf("\n=============================================\n");
+    printf("=============================================\n");
     if(WAY_SIZE == 1) printf("L%d Cache type:    Direct-Mapped Cache\n", 1);
     else if(WAY_SIZE == NUM_BLOCKS) printf("L%d Cache type:    Fully Associative Cache\n", 1);
     else printf("L%d Cache type:    %d-Way Associative Cache\n", 1, WAY_SIZE);
