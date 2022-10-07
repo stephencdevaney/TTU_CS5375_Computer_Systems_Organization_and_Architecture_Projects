@@ -64,8 +64,8 @@ if test -f "./cachesim.exe"; then
 				echo -e "${line_size[$j]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
 			done
 
-			for j in ${!cache_size[@]}; do
-				echo -e "${cache_size[$j]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
+			for k in ${!cache_size[@]}; do
+				echo -e "${cache_size[$k]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
 			done
         done
 	fi
