@@ -6,9 +6,13 @@
 # 10/04/2022
 
 
-export RUN_DIRECT_MAPPED=false
-export RUN_NWAY_ASSOCIATIVE=true
-export RUN_FULLY_ASSOCIATIVE=false
+RUN_DIRECT_MAPPED=false
+RUN_NWAY_ASSOCIATIVE=true
+RUN_FULLY_ASSOCIATIVE=false
+way=(2 4 8)
+line_size=(16 32 128)
+cache_size=(16384 32768 65536)
+trace_files="hw5_memoryaddr trace.stream_10 trace.stream_20 trace.stream trace.hpcg"
 
 
 # if cachesim.exe does not exist in the current working directory try to compile it
@@ -55,18 +59,17 @@ if test -f "./cachesim.exe"; then
 
 	# Runs a N-Way Associative Cache if RUN_NWAY_ASSOCIATIVE is true.
 	if [[ $RUN_NWAY_ASSOCIATIVE == true ]] ; then
-		way=(2 4 8)
-		line_size=(16 32 128)
-		cache_size=(16384 32768 65536)
 		for i in ${!way[@]}; do
 			echo -e "Testing all line sizes and cache sizes of a ${way[i]} way associative cache for all trace files.:" > CachesimOutput/${way[$i]}way_associative_output.txt
 			for j in ${!line_size[@]}; do
-				echo -e "\n\nSimulating ${way[$i]} cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$j]} bytes on tracefile hw5_memoryaddr." >> CachesimOutput/${way[$i]}way_associative_output.txt
-				./cachesim.exe ${way[i]}-way -b ${line_size[$j]} -c 32768 trace_for_students/hw5_memoryaddr >> CachesimOutput/${way[$i]}way_associative_output.txt
+				for k in ${!trace_files[@]}; do
+					echo -e "\n\nSimulating ${way[$i]} cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$j]} bytes on tracefile ${trace_files[$k]}." >> CachesimOutput/${way[$i]}way_associative_output.txt
+					./cachesim.exe ${way[i]}-way -b ${line_size[$j]} -c 32768 trace_for_students/${trace_files[$k]} >> CachesimOutput/${way[$i]}way_associative_output.txt
+				done
 			done
 
-			for k in ${!cache_size[@]}; do
-				echo -e "${cache_size[$k]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
+			for j in ${!cache_size[@]}; do
+				echo -e "${cache_size[$j]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
 			done
         done
 	fi
@@ -74,8 +77,6 @@ if test -f "./cachesim.exe"; then
 
 	# Runs a FULLY Associative Cache if RUN_FULLY_ASSOCIATIVE is true.
 	if [[ $RUN_FULLY_ASSOCIATIVE == true ]] ; then
-		line_size=(16 32 128)
-		cache_size=(16384 32768 65536)
         echo -e "" > fully_associative_output.txt
 		for i in ${!line_size[@]}; do
 			echo ${line_size[$i]}
