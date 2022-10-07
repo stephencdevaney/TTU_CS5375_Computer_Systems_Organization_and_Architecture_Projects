@@ -55,29 +55,33 @@ if test -f "./cachesim.exe"; then
 
 	# Runs a N-Way Associative Cache if RUN_NWAY_ASSOCIATIVE is true.
 	if [[ $RUN_NWAY_ASSOCIATIVE == true ]] ; then
-                line_size=(16 32 128)
-                for i in ${!line_size[@]}; do
-                        echo ${line_size[$i]}
-                done
+		way=(2 4 8)
+		line_size=(16 32 128)
+		for i in ${!way[@]}; do
+			touch CachesimOutput/${way[$i]}way_associative_output.txt
+			for j in ${!line_size[@]}; do
+				echo -e "${line_size[$j]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
+			done
+		done
 
-                cache_size=(16384 32768 65536)
-                for i in ${!cache_size[@]}; do
-                        echo ${cache_size[$i]}
-                done
+		cache_size=(16384 32768 65536)
+		for i in ${!cache_size[@]}; do
+			echo -e "${cache_size[$i]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
+		done
 	fi
 
 
 	# Runs a FULLY Associative Cache if RUN_FULLY_ASSOCIATIVE is true.
 	if [[ $RUN_FULLY_ASSOCIATIVE == true ]] ; then
-                line_size=(16 32 128)
-                for i in ${!line_size[@]}; do
-                        echo ${line_size[$i]}
-                done
+		line_size=(16 32 128)
+		for i in ${!line_size[@]}; do
+			echo ${line_size[$i]}
+		done
 
-                cache_size=(16384 32768 65536)
-                for i in ${!cache_size[@]}; do
-                        echo ${cache_size[$i]}
-                done
+		cache_size=(16384 32768 65536)
+		for i in ${!cache_size[@]}; do
+			echo ${cache_size[$i]}
+		done
 	fi
 
 
