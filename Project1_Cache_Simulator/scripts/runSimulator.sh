@@ -32,7 +32,7 @@ fi
 # if the compilation was successful run the cache simulator other wise output error message
 if test -f "./cachesim.exe"; then
 	# Create an output directory if it does not exists
-	if ! test -d "cachesimOutput"; then
+	if ! test -d "CachesimOutput"; then
 		mkdir CachesimOutput
 	fi
 
@@ -59,14 +59,14 @@ if test -f "./cachesim.exe"; then
 		line_size=(16 32 128)
 		cache_size=(16384 32768 65536)
 		for i in ${!way[@]}; do
-			touch CachesimOutput/${way[$i]}way_associative_output.txt
+			echo -e "" > ${way[$i]}way_associative_output.txt
 			for j in ${!line_size[@]}; do
 				echo -e "${line_size[$j]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
 			done
 
-			#for k in ${!cache_size[@]}; do
-				#echo -e "${cache_size[$k]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
-			#done
+			for k in ${!cache_size[@]}; do
+				echo -e "${cache_size[$k]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
+			done
         done
 	fi
 
@@ -74,11 +74,12 @@ if test -f "./cachesim.exe"; then
 	# Runs a FULLY Associative Cache if RUN_FULLY_ASSOCIATIVE is true.
 	if [[ $RUN_FULLY_ASSOCIATIVE == true ]] ; then
 		line_size=(16 32 128)
+		cache_size=(16384 32768 65536)
+        echo -e "" > fully_associative_output.txt
 		for i in ${!line_size[@]}; do
 			echo ${line_size[$i]}
 		done
 
-		cache_size=(16384 32768 65536)
 		for i in ${!cache_size[@]}; do
 			echo ${cache_size[$i]}
 		done
