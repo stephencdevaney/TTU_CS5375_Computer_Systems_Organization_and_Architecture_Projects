@@ -65,8 +65,8 @@ if test -f "./cachesim.exe"; then
 		done
 
 		cache_size=(16384 32768 65536)
-		for i in ${!cache_size[@]}; do
-			echo -e "${cache_size[$i]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
+		for j in ${!cache_size[@]}; do
+			echo -e "${cache_size[$j]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
 		done
 	fi
 
