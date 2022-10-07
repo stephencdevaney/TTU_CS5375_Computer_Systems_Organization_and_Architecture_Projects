@@ -6,21 +6,83 @@
  * By Yong Chen
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
-#include <math.h>
 #include "cachesim.h"
 
 int main(int argc, char *argv[]){
-    if (argc != 3) {
-        printf("Usage: %s <direct, N-way, fully> <trace file name>\n", argv[0]);
-        return 1;
-    }
-    
-    BLOCK_SIZE = 128;
+    struct cache_t d_cache;
+    char *trace_file_name;
+    FILE *fp;
+    char mem_request[20];
+    uint64_t address;
+    BLOCK_SIZE = 64;
+    WAY_SIZE = 1;
     CACHE_SIZE = 32768;
+    if (argc < 3) {
+        if (argc == 2){
+            if(strcmp(argv[1], "--help") != 0 && strcmp(argv[1], "-h") != 0){
+                printUsage(argv[0]);
+                return 1;
+            }
+        }
+        else{
+            printUsage(argv[0]);
+            return 1;
+        }
+    }
+    else{
+        if(strcmp(argv[1], "--help") != 0 && strcmp(argv[1], "-h")) optind += 1;
+        if(strcmp(argv[argc-1], "--help") != 0 && strcmp(argv[argc-1], "-h") != 0){
+            trace_file_name = argv[argc-1];
+            /* Opening the memory trace file */
+            fp = fopen(trace_file_name, "r");
+            if(fp == NULL){
+                printf("Failed to open file %s\n", trace_file_name);
+                printUsage(argv[0]);
+                return 1;
+            }
+        }
+    }
+    // get changes to default values for ndata, dim, kk, and the number of query points from the command line
+    static struct option long_options[] = {
+        {"block_size", 1, NULL, 'b'},
+        {"cache_size", 1, NULL, 'c'},
+        {"help", 0, NULL, 'h'},
+        {NULL, 0, NULL, 0}
+    };
+    // modify default values based on values for ndata, dim, kk, and the number of query points recieved from the command line
+    int c;
+    while((c = getopt_long(argc, argv, "+:hb:c:", long_options, NULL)) != -1){
+        switch(c){
+            case 'h':
+                printUsage(argv[0]);
+                printHelp(argv[0]);
+                return 0;
+            case 'b':
+                BLOCK_SIZE = atoi(optarg);
+                if(BLOCK_SIZE == 0){
+                    printf("%s: invalid argument for option '-%c'\n", argv[0], optopt);
+                    printUsage(argv[0]);
+                    return 1;
+                }
+                break;
+            case 'c':
+                CACHE_SIZE = atoi(optarg);
+                if(CACHE_SIZE == 0){
+                    printf("%s: invalid argument for option '-%c'\n", argv[0], optopt);
+                    printUsage(argv[0]);
+                    return 1;
+                }
+                break;
+            case ':':
+                printf("%s: option '-%c' requires an argument\n", argv[0], optopt);
+                return 1;
+            case '?':
+            default:
+                printf("%s: option '%c' is invalid\n", argv[0], optopt);
+                printUsage(argv[0]);
+                return 1;
+        }
+    }
     NUM_BLOCKS = (CACHE_SIZE / BLOCK_SIZE);
     if(strncmp(argv[1], "direct", 6) == 0) WAY_SIZE = 1;
     else if(strncmp(argv[1], "fully", 5) == 0) WAY_SIZE = NUM_BLOCKS;
@@ -32,18 +94,11 @@ int main(int argc, char *argv[]){
             WAY_SIZE = atoi(strtok(arguement_copy, "-"));
         }
         else{
-            printf("Usage: %s <direct, N-way, fully> <trace file name>\n", argv[0]);
+            printUsage(argv[0]);
             return 1;
         }
     }
     NUM_SETS = (NUM_BLOCKS / WAY_SIZE);
-
-    char* trace_file_name = argv[2];
-    struct cache_t d_cache;
-    char mem_request[20];
-    uint64_t address;
-    FILE *fp;
-    
     /* Initialization */
     d_cache.valid_field = (unsigned*)malloc(NUM_BLOCKS * sizeof(unsigned));
     d_cache.dirty_field = (unsigned*)malloc(NUM_BLOCKS * sizeof(unsigned));
@@ -55,24 +110,14 @@ int main(int argc, char *argv[]){
     }
     d_cache.hits = 0;
     d_cache.misses = 0;
-    /* Opening the memory trace file */
     
-//        if (strncmp(argv[1], "direct", 6)==0) { /* Simulating direct-mapped cache */
-//            /* Read the memory request address and access the cache */
-//            while (fgets(mem_request, 20, fp)!= NULL) {
-//                address = convert_address(mem_request);
-//                cache_access(&d_cache, address);
-//            }
-//            printFinalOutput(&d_cache);
-//        }
-    fp = fopen(trace_file_name, "r");
+    // running memory trace file through cache
     while (fgets(mem_request, 20, fp)!= NULL) {
         address = convert_address(mem_request);
         cache_access(&d_cache, address);
     }
     printFinalOutput(&d_cache);
     fclose(fp);
-
     return 0;
 }
 
@@ -177,7 +222,41 @@ void cache_access(struct cache_t *cache, uint64_t address){
 }
 
 
+void printUsage(char *argv){
+    // print the usage to run the program from the command line
+    printf("Usage: %s <direct, n-way, fully> <options> <trace file name>\n", argv);
+    printf("Help Usage 1: %s --help\n", argv);
+    printf("Help Usage 2: %s --h\n", argv);
+}
+
+
+void printHelp(char *argv){
+    // print the help informaion reguarding options to run the program from the command line
+    printf("\n<direct, n-way, fully>: (one of the three arguements is required)\n");
+    printf("direct:\n");
+    printf("\tSimulates a Direct-Mapped Cache.\n");
+    printf("n-way:\n");
+    printf("\tSimulates a N-Way Associative Cache.\n");
+    printf("Replace 'n' by an integer to indicate the way size.\n");
+    printf("fully:\n");
+    printf("\tSimulates a Fully Associative Cache.\n");
+    
+    printf("\nOPTIONS: (all optional)\n");
+    printf("--block_size, -b:\n");
+    printf("\tSet a block size for the cache. (Must be a power of two and in bytes!)\n");
+    printf("\tDefault for L1 is 64 bytes.\n");
+    printf("--cache_size, -c:\n");
+    printf("\tSet the total size for the cache. (Must be a power of two and in bytes!)\n");
+    printf("\tDefault for L1 is 32768 bytes which is 32KB.\n");
+    printf("--help, -h:\n");
+    printf("\tWill print out this help menu and exit the program.\n");
+    printf("\tNote: With this option <direct, n-way, fully> and <trace file name> arguements are no longer required.\n");
+    printf("\t      This option will not run the cache even if <direct, n-way, fully> and <trace file name> arguements are provided.\n");
+}
+
+
 void printFinalOutput(struct cache_t *cache){
+    // output cache type and information
     printf("\n=============================================\n");
     if(WAY_SIZE == 1) printf("L%d Cache type:    Direct-Mapped Cache\n", 1);
     else if(WAY_SIZE == NUM_BLOCKS) printf("L%d Cache type:    Fully Associative Cache\n", 1);

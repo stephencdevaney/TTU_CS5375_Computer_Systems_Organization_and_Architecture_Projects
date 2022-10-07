@@ -6,6 +6,13 @@
  * By Yong Chen
  */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <getopt.h>
+#include <string.h>
+#include <math.h>
+
 int BLOCK_SIZE;           /* Cache block size (or cache line size) in bytes \\
                                  (must be power of 2). 4 Bytes = 1 Word */
 int WAY_SIZE;             /* Associativity; 1-way = direct-mapped */
@@ -34,3 +41,5 @@ uint64_t convert_address(char memory[]);  // Read the memory traces and convert 
 int replacementPolicy();  // replacement policy utilized in cache_access function
 void cache_access(struct cache_t *cache, uint64_t address);  // Simulate cache access
 void printFinalOutput(struct cache_t *cache);  // print function for final output
+void printUsage(char *);
+void printHelp(char *);
