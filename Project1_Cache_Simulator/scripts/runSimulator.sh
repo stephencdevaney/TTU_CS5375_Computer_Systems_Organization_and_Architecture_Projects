@@ -62,7 +62,7 @@ if test -f "./cachesim.exe"; then
 			echo -e "Testing all line sizes and cache sizes of a ${!way[@]} way associative cache for all trace files.:" > CachesimOutput/${way[$i]}way_associative_output.txt
 			for j in ${!line_size[@]}; do
 				echo -e "Simulating ${way[$i]} cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$j]} bytes on tracefile hw5_memoryaddr.\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
-				./cachesim.exe ${!way[@]} -b ${line_size[$j]} -c 32768 trace_for_students/hw5_memoryaddr >> CachesimOutput/${way[$i]}way_associative_output.txt
+				./cachesim.exe ${!way[i]} -b ${line_size[$j]} -c 32768 trace_for_students/hw5_memoryaddr >> CachesimOutput/${way[$i]}way_associative_output.txt
 			done
 
 			for k in ${!cache_size[@]}; do
