@@ -12,7 +12,7 @@ RUN_FULLY_ASSOCIATIVE=false
 way=(2 4 8)
 line_size=(16 32 128)
 cache_size=(16384 32768 65536)
-trace_files="hw5_memoryaddr trace.stream_10 trace.stream_20 trace.stream trace.hpcg"
+trace_files=("hw5_memoryaddr" "trace.stream_10" "trace.stream_20" "trace.stream" "trace.hpcg")
 
 
 # if cachesim.exe does not exist in the current working directory try to compile it
