@@ -46,7 +46,7 @@ if test -f "./cachesim.exe"; then
 		#Test the Direct Mapped Cache for all trace files and place all output into one output file
 		echo -e "Simulating Direct-Mapped Cache for all trace files:" > CachesimOutput/direct_mapped_output.txt
 		for i in ${!trace_files[@]}; do
-			echo -e "Simulating Direct Mapped Cache on tracefile ${trace_files[$i]}:" >> CachesimOutput/direct_mapped_output.txt
+			echo -e "\n\nSimulating Direct Mapped Cache on tracefile ${trace_files[$i]}:" >> CachesimOutput/direct_mapped_output.txt
 			./cachesim.exe direct trace_for_students/${trace_files[$i]} >> CachesimOutput/direct_mapped_output.txt
 		done
 	fi
