@@ -4,8 +4,8 @@
 #SBATCH -o %x.o%j
 #SBATCH -e %x.e%j
 #SBATCH -p nocona
-#SBATCH -A cs5375
-#SBATCH -r cs5375
+#SBATCH --account cs5375
+#SBATCH --reservation cs5375
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -t 00:05:00
