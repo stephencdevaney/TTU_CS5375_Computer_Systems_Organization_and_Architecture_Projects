@@ -184,8 +184,8 @@ void cache_access(struct cache_t *cache, uint64_t address){
     
     // loop through the assocative of the queue note will only perform one iteration of the loop for direct mapped, n for n-way, and block size for fully associative
     short hitflag = 0;  // needed to indicate a miss after a hit has been found
-    uint64_t way_index;  // keeps track of the index for n-way and fully associative cache. Will only remain 0 for a direct mapped cache based on for loop parameters.
-    for(way_index = 0; way_index < WAY_SIZE; way_index++){
+    uint64_t way_index = 0;  // keeps track of the index for n-way and fully associative cache. Will only remain 0 for a direct mapped cache based on for loop parameters.
+    for(; way_index < WAY_SIZE; way_index++){
         // check for hits by checkint the valid field and comparing the tag to the current index in the tag field
         //      Note: way_index = 0 for direct and index = 0 for fully associative as required by cache types
         if(cache->valid_field[index * WAY_SIZE + way_index] && cache->tag_field[index * WAY_SIZE + way_index] == tag){ /* Cache hit */
@@ -205,7 +205,7 @@ void cache_access(struct cache_t *cache, uint64_t address){
     if(!hitflag){  // if the hit flag was not raised we have a miss
         /* Cache miss */
         cache->misses += 1;
-        way_index = replacementPolicy();
+        if(way_index == WAY_SIZE) way_index = replacementPolicy();  // if the cache is fulll get a replacement way index
         #ifdef DBG
             printf("Miss!\n");
         #endif
