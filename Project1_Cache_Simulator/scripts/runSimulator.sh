@@ -6,9 +6,9 @@
 # 10/04/2022
 
 
-RUN_DIRECT_MAPPED=false
+RUN_DIRECT_MAPPED=true
 RUN_NWAY_ASSOCIATIVE=true
-RUN_FULLY_ASSOCIATIVE=false
+RUN_FULLY_ASSOCIATIVE=true
 way=(2 4 8)
 line_size=(16 32 128)
 cache_size=(16384 32768 65536)
@@ -44,23 +44,19 @@ if test -f "./cachesim.exe"; then
 	# Runs a direct mapped cache if RUN_DIRECT_MAPPED is true.
 	if [[ $RUN_DIRECT_MAPPED == true ]] ; then	
 		#Test the Direct Mapped Cache for all trace files and place all output into one output file
-		echo -e "Simulating Direct Mapped Cache on tracefile 'hw5_memoryaddr'" > CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/hw5_memoryaddr >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_10'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream_10 >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream_20'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream_20 >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.stream'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.stream >> CachesimOutput/direct_mapped_output.txt
-		echo -e "\n\nSimulating Direct Mapped Cache on tracefile 'trace.hpcg'" >> CachesimOutput/direct_mapped_output.txt
-		./cachesim.exe direct trace_for_students/trace.hpcg >> CachesimOutput/direct_mapped_output.txt
+		echo -e "Simulating Direct-Mapped Cache for all trace files:" > CachesimOutput/direct_mapped_output.txt
+		for i in ${!trace_files[@]}; do
+			echo -e "Simulating Direct Mapped Cache on tracefile ${trace_files[$i]}:" >> CachesimOutput/direct_mapped_output.txt
+			./cachesim.exe direct trace_for_students/${trace_files[$i]} >> CachesimOutput/direct_mapped_output.txt
+		done
 	fi
 
 
 	# Runs a N-Way Associative Cache if RUN_NWAY_ASSOCIATIVE is true.
 	if [[ $RUN_NWAY_ASSOCIATIVE == true ]] ; then
+		#Test the N-Way Associative Cache for all ways, trace files, line sizes, and cache sizes and place all output into the respective n-way cache output file
 		for i in ${!way[@]}; do
-			echo -e "Testing all line sizes and cache sizes of a ${way[i]} way associative cache for all trace files.:" > CachesimOutput/${way[$i]}way_associative_output.txt
+			echo -e "Test all line sizes and cache sizes of a ${way[i]} way associative cache for all trace files:" > CachesimOutput/${way[$i]}way_associative_output.txt
 			for j in ${!line_size[@]}; do
 				for k in ${!trace_files[@]}; do
 					echo -e "\n\nSimulating ${way[$i]} cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$j]} bytes on tracefile ${trace_files[$k]}." >> CachesimOutput/${way[$i]}way_associative_output.txt
@@ -69,21 +65,30 @@ if test -f "./cachesim.exe"; then
 			done
 
 			for j in ${!cache_size[@]}; do
-				echo -e "${cache_size[$j]}\n" >> CachesimOutput/${way[$i]}way_associative_output.txt
+				for k in ${!trace_files[@]}; do
+					echo -e "\n\nSimulating ${way[$i]} cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$j]} bytes on tracefile ${trace_files[$k]}." >> CachesimOutput/${way[$i]}way_associative_output.txt
+					./cachesim.exe ${way[i]}-way -b 64 -c ${cache_size[$j]} trace_for_students/${trace_files[$k]} >> CachesimOutput/${way[$i]}way_associative_output.txt
+				done
 			done
-        done
+		done
 	fi
 
 
 	# Runs a FULLY Associative Cache if RUN_FULLY_ASSOCIATIVE is true.
 	if [[ $RUN_FULLY_ASSOCIATIVE == true ]] ; then
-        echo -e "" > fully_associative_output.txt
+		echo -e "Test all line sizes and cache sizes of a fully associative cache for all trace files:" > CachesimOutput/fully_associative_output.txt
 		for i in ${!line_size[@]}; do
-			echo ${line_size[$i]}
+			for j in ${!trace_files[@]}; do
+				echo -e "\n\nSimulating fully associative cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$i]} bytes on tracefile ${trace_files[$j]}." >> CachesimOutput/fully_associative_output.txt
+				./cachesim.exe fully -b ${line_size[$i]} -c 32768 trace_for_students/${trace_files[$j]} >> CachesimOutput/fully_associative_output.txt
+			done
 		done
 
-		for i in ${!cache_size[@]}; do
-			echo ${cache_size[$i]}
+		for j in ${!cache_size[@]}; do
+			for k in ${!trace_files[@]}; do
+				echo -e "\n\nSimulating fully associative cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$i]} bytes on tracefile ${trace_files[$j]}." >> CachesimOutput/fully_associative_output.txt
+				./cachesim.exe fully -b 64 -c ${cache_size[$i]} trace_for_students/${trace_files[$j]} >> CachesimOutput/fully_associative_output.txt
+			done
 		done
 	fi
 
