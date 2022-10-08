@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 #SBATCH -J cacheSim
 #SBATCH -o %x.o%j
