@@ -2,7 +2,7 @@ CC = gcc
 EXE = cachesim.exe
 
 %.exe : %.o
-	$(CC) -o $@ $^
+	$(CC) -o $@ $^ -lm
 
 %.o : %.c
 	$(CC) -c -o $@ $^

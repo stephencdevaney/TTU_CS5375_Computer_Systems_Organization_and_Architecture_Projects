@@ -5,7 +5,7 @@
 # Cache Simulator
 # 10/04/2022
 
-
+CACHISM_DIR=/home/stdevane/CS5375/CS5375_Computer_Systems_Organization_and_Architecture_Projects/Project1_Cache_Simulator
 RUN_DIRECT_MAPPED=true
 RUN_NWAY_ASSOCIATIVE=true
 RUN_FULLY_ASSOCIATIVE=true
@@ -16,16 +16,16 @@ trace_files=("hw5_memoryaddr" "trace.stream_10" "trace.stream_20" "trace.stream"
 
 
 # if cachesim.exe does not exist in the current working directory try to compile it
-if ! test -f "./cachesim.exe"; then
+if ! test -f "$CACHISM_DIR/cachesim.exe"; then
 	# if cachesim.c and cachemsim.h are in the current working directory compile them else output an error message
-	if test -f "./cachesim.c" && test -f "./cachesim.h"; then
+	if test -f "$CACHISM_DIR/cachesim.c" && test -f "$CACHISM_DIR/cachesim.h"; then
 		# if the make file exist in the current workiing directory use it other wise call the commands to compile it
-		if test -f "./Makefile"; then
-			make
+		if test -f "$CACHISM_DIR/Makefile"; then
+			make -C $CACHISM_DIR
 		else
-			gcc -c -o cachesim.o cachesim.c
-			gcc -o cachesim.exe cachesim.o
-			rm cachesim.o
+			gcc -c -o $CACHISM_DIR/cachesim.o $CACHISM_DIR/cachesim.c
+			gcc -o $CACHISM_DIR/cachesim.exe $CACHISM_DIR/cachesim.o
+			rm $CACHISM_DIR/cachesim.o
 		fi
 	else
 		echo "Please make sure cachesim.c and cachesim.h are both in your current directory!"
@@ -34,20 +34,20 @@ fi
 
 
 # if the compilation was successful run the cache simulator other wise output error message
-if test -f "./cachesim.exe"; then
+if test -f "$CACHISM_DIR/cachesim.exe"; then
 	# Create an output directory if it does not exists
-	if ! test -d "CachesimOutput"; then
-		mkdir CachesimOutput
+	if ! test -d "$CACHISM_DIR/CachesimOutput"; then
+		mkdir $CACHISM_DIR/CachesimOutput
 	fi
 
 
 	# Runs a direct mapped cache if RUN_DIRECT_MAPPED is true.
 	if [[ $RUN_DIRECT_MAPPED == true ]] ; then	
 		#Test the Direct Mapped Cache for all trace files and place all output into one output file
-		echo -e "Simulating Direct-Mapped Cache for all trace files:" > CachesimOutput/direct_mapped_output.txt
+		echo -e "Simulating Direct-Mapped Cache for all trace files:" > $CACHISM_DIR/CachesimOutput/direct_mapped_output.txt
 		for i in ${!trace_files[@]}; do
-			echo -e "\n\nSimulating Direct Mapped Cache on tracefile ${trace_files[$i]}:" >> CachesimOutput/direct_mapped_output.txt
-			./cachesim.exe direct trace_for_students/${trace_files[$i]} >> CachesimOutput/direct_mapped_output.txt
+			echo -e "\n\nSimulating Direct Mapped Cache on tracefile ${trace_files[$i]}:" >> $CACHISM_DIR/CachesimOutput/direct_mapped_output.txt
+			$CACHISM_DIR/cachesim.exe direct $CACHISM_DIR/trace_for_students/${trace_files[$i]} >> $CACHISM_DIR/CachesimOutput/direct_mapped_output.txt
 		done
 	fi
 
@@ -56,18 +56,18 @@ if test -f "./cachesim.exe"; then
 	if [[ $RUN_NWAY_ASSOCIATIVE == true ]] ; then
 		#Test the N-Way Associative Cache for all ways, trace files, line sizes, and cache sizes and place all output into the respective n-way cache output file
 		for i in ${!way[@]}; do
-			echo -e "Test all line sizes and cache sizes of a ${way[i]} way associative cache for all trace files:" > CachesimOutput/${way[$i]}way_associative_output.txt
+			echo -e "Test all line sizes and cache sizes of a ${way[i]} way associative cache for all trace files:" > $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 			for j in ${!line_size[@]}; do
 				for k in ${!trace_files[@]}; do
-					echo -e "\n\nSimulating ${way[$i]} cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$j]} bytes on tracefile ${trace_files[$k]}." >> CachesimOutput/${way[$i]}way_associative_output.txt
-					./cachesim.exe ${way[i]}-way -b ${line_size[$j]} -c 32768 trace_for_students/${trace_files[$k]} >> CachesimOutput/${way[$i]}way_associative_output.txt
+					echo -e "\n\nSimulating ${way[$i]} cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$j]} bytes on tracefile ${trace_files[$k]}." >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
+					$CACHISM_DIR/cachesim.exe ${way[i]}-way -b ${line_size[$j]} -c 32768 $CACHISM_DIR/trace_for_students/${trace_files[$k]} >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 				done
 			done
 
 			for j in ${!cache_size[@]}; do
 				for k in ${!trace_files[@]}; do
-					echo -e "\n\nSimulating ${way[$i]} cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$j]} bytes on tracefile ${trace_files[$k]}." >> CachesimOutput/${way[$i]}way_associative_output.txt
-					./cachesim.exe ${way[i]}-way -b 64 -c ${cache_size[$j]} trace_for_students/${trace_files[$k]} >> CachesimOutput/${way[$i]}way_associative_output.txt
+					echo -e "\n\nSimulating ${way[$i]} cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$j]} bytes on tracefile ${trace_files[$k]}." >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
+					$CACHISM_DIR/cachesim.exe ${way[i]}-way -b 64 -c ${cache_size[$j]} $CACHISM_DIR/trace_for_students/${trace_files[$k]} >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 				done
 			done
 		done
@@ -76,28 +76,28 @@ if test -f "./cachesim.exe"; then
 
 	# Runs a FULLY Associative Cache if RUN_FULLY_ASSOCIATIVE is true.
 	if [[ $RUN_FULLY_ASSOCIATIVE == true ]] ; then
-		echo -e "Test all line sizes and cache sizes of a fully associative cache for all trace files:" > CachesimOutput/fully_associative_output.txt
+		echo -e "Test all line sizes and cache sizes of a fully associative cache for all trace files:" > $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
 		for i in ${!line_size[@]}; do
 			for j in ${!trace_files[@]}; do
-				echo -e "\n\nSimulating fully associative cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$i]} bytes on tracefile ${trace_files[$j]}." >> CachesimOutput/fully_associative_output.txt
-				./cachesim.exe fully -b ${line_size[$i]} -c 32768 trace_for_students/${trace_files[$j]} >> CachesimOutput/fully_associative_output.txt
+				echo -e "\n\nSimulating fully associative cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$i]} bytes on tracefile ${trace_files[$j]}." >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
+				$CACHISM_DIR/cachesim.exe fully -b ${line_size[$i]} -c 32768 $CACHISM_DIR/trace_for_students/${trace_files[$j]} >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
 			done
 		done
 
 		for j in ${!cache_size[@]}; do
 			for j in ${!trace_files[@]}; do
-				echo -e "\n\nSimulating fully associative cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$i]} bytes on tracefile ${trace_files[$j]}." >> CachesimOutput/fully_associative_output.txt
-				./cachesim.exe fully -b 64 -c ${cache_size[$i]} trace_for_students/${trace_files[$j]} >> CachesimOutput/fully_associative_output.txt
+				echo -e "\n\nSimulating fully associative cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$i]} bytes on tracefile ${trace_files[$j]}." >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
+				$CACHISM_DIR/cachesim.exe fully -b 64 -c ${cache_size[$i]} $CACHISM_DIR/trace_for_students/${trace_files[$j]} >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
 			done
 		done
 	fi
 
 
 	# cleans up .exe file after the completion of the simulator
-	if test -f "./Makefile"; then
-		make clean
+	if test -f "$CACHISM_DIR/Makefile"; then
+		make clean -C $CACHISM_DIR/
 	else
-		rm -f *.exe *.o
+		rm -f $CACHISM_DIR/*.exe $CACHISM_DIR/*.o
 	fi
 else
 	echo "Unable to run cache simulator cachesim.exe not found!"
