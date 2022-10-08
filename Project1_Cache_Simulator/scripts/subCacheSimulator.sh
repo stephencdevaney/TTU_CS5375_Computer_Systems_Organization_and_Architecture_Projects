@@ -96,8 +96,8 @@ if test -f "./cachesim.exe"; then
 			done
 		done
 
-		for j in ${!cache_size[@]}; do
-			for k in ${!trace_files[@]}; do
+		for i in ${!cache_size[@]}; do
+			for j in ${!trace_files[@]}; do
 				echo -e "\n\nSimulating fully associative cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$i]} bytes on tracefile ${trace_files[$j]}." >> CachesimOutput/fully_associative_output.txt
 				./cachesim.exe fully -b 64 -c ${cache_size[$i]} trace_for_students/${trace_files[$j]} >> CachesimOutput/fully_associative_output.txt
 			done
