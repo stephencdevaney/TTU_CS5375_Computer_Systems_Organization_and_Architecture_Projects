@@ -1,0 +1,2 @@
+2-level trace_for_students/hw5_memoryaddr
+2-level -n 8 -f -c 32768 -c 131072 -b 32 -b 64 trace_for_students/hw5_memoryaddr
