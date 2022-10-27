@@ -3,10 +3,12 @@
  * Course Project
  * Cache Simulator Design and Development
  * FALL 2022
- * By Yong Chen
+ * Orginal Simulator By Yong Chen Modified by Stephen Devaney
  */
 
+
 #include "cachesim.h"
+
 
 int main(int argc, char *argv[]){
     struct cache_t d_cache;
@@ -17,7 +19,7 @@ int main(int argc, char *argv[]){
     BLOCK_SIZE = 64;
     WAY_SIZE = 1;
     CACHE_SIZE = 32768;
-    if (argc < 3) {
+    if (argc < 3){
         if (argc == 2){
             if(strcmp(argv[1], "--help") != 0 && strcmp(argv[1], "-h") != 0){
                 printUsage(argv[0]);
@@ -30,7 +32,7 @@ int main(int argc, char *argv[]){
         }
     }
     else{
-        if(strcmp(argv[1], "--help") != 0 && strcmp(argv[1], "-h")) optind += 1;
+        if(strcmp(argv[1], "--help") != 0 && strcmp(argv[1], "-h") != 0) optind += 1;
         if(strcmp(argv[argc-1], "--help") != 0 && strcmp(argv[argc-1], "-h") != 0){
             trace_file_name = argv[argc-1];
             /* Opening the memory trace file */
@@ -42,14 +44,16 @@ int main(int argc, char *argv[]){
             }
         }
     }
-    // get changes to default values for ndata, dim, kk, and the number of query points from the command line
+    
+    // get changes to default values for BLOCK_SIZE and CACHE_SIZE from the command line
     static struct option long_options[] = {
         {"block_size", 1, NULL, 'b'},
         {"cache_size", 1, NULL, 'c'},
         {"help", 0, NULL, 'h'},
         {NULL, 0, NULL, 0}
     };
-    // modify default values based on values for ndata, dim, kk, and the number of query points recieved from the command line
+    
+    // modify default values based on values for BLOCK_SIZE and CACHE_SIZE recieved from the command line
     int c;
     while((c = getopt_long(argc, argv, "+:hb:c:", long_options, NULL)) != -1){
         switch(c){
@@ -83,6 +87,7 @@ int main(int argc, char *argv[]){
                 return 1;
         }
     }
+    
     NUM_BLOCKS = (CACHE_SIZE / BLOCK_SIZE);
     if(strncmp(argv[1], "direct", 6) == 0) WAY_SIZE = 1;
     else if(strncmp(argv[1], "fully", 5) == 0) WAY_SIZE = NUM_BLOCKS;
@@ -99,6 +104,7 @@ int main(int argc, char *argv[]){
         }
     }
     NUM_SETS = (NUM_BLOCKS / WAY_SIZE);
+    
     /* Initialization */
     d_cache.valid_field = (unsigned*)malloc(NUM_BLOCKS * sizeof(unsigned));
     d_cache.dirty_field = (unsigned*)malloc(NUM_BLOCKS * sizeof(unsigned));
@@ -116,58 +122,16 @@ int main(int argc, char *argv[]){
         address = convert_address(mem_request);
         cache_access(&d_cache, address);
     }
+    
     printFinalOutput(&d_cache);
     fclose(fp);
     return 0;
 }
 
-uint64_t convert_address(char memory_addr[]){
-/* Converts the physical 32-bit address in the trace file to the "binary" \\
- * (a uint64 that can have bitwise operations on it) */
-    uint64_t binary = 0;
-    int i = 0;
-
-    while (memory_addr[i] != '\n') {
-        if (memory_addr[i] <= '9' && memory_addr[i] >= '0') {
-            binary = (binary*16) + (memory_addr[i] - '0');
-        } else {
-            if(memory_addr[i] == 'a' || memory_addr[i] == 'A') {
-                binary = (binary*16) + 10;
-            }
-            if(memory_addr[i] == 'b' || memory_addr[i] == 'B') {
-                binary = (binary*16) + 11;
-            }
-            if(memory_addr[i] == 'c' || memory_addr[i] == 'C') {
-                binary = (binary*16) + 12;
-            }
-            if(memory_addr[i] == 'd' || memory_addr[i] == 'D') {
-                binary = (binary*16) + 13;
-            }
-            if(memory_addr[i] == 'e' || memory_addr[i] == 'E') {
-                binary = (binary*16) + 14;
-            }
-            if(memory_addr[i] == 'f' || memory_addr[i] == 'F') {
-                binary = (binary*16) + 15;
-            }
-        }
-        i++;
-    }
-    #ifdef DBG
-        printf("%s converted to %llu\n", memory_addr, binary);
-    #endif
-    return binary;
-}
 
 
-int replacementPolicy(){
-    int replacement_index = 0;
-    if(WAY_SIZE > 1){  // if way size = 1 then the cache is a direct mapped then no replacement policy is needed, otherwise use random replacement policy
-        replacement_index = rand() % WAY_SIZE; // calculates the random index in the set to be replaced
-    }
-    return replacement_index;
-}
-
-
+/* ========================================================================================================================================================
+ * Cache Access Functions */
 void cache_access(struct cache_t *cache, uint64_t address){
     /* The block address is the block address shifted right by log of the block size for all cache types
      * The index is the block address % number of blocks for direct mapped, block address % (number of blocks / way size) for n-way associative, and 0 for fully associative as fully associative has no index due to its design. 
@@ -222,6 +186,80 @@ void cache_access(struct cache_t *cache, uint64_t address){
 }
 
 
+
+/* ========================================================================================================================================================
+ * Helper Functions */
+int replacementPolicy(){
+    int replacement_index = 0;
+    if(WAY_SIZE > 1){  // if way size = 1 then the cache is a direct mapped then no replacement policy is needed, otherwise use random replacement policy
+        replacement_index = rand() % WAY_SIZE; // calculates the random index in the set to be replaced
+    }
+    return replacement_index;
+}
+
+
+uint64_t convert_address(char memory_addr[]){
+/* Converts the physical 32-bit address in the trace file to the "binary" \\
+ * (a uint64 that can have bitwise operations on it) */
+    uint64_t binary = 0;
+    int i = 0;
+
+    while (memory_addr[i] != '\n') {
+        if (memory_addr[i] <= '9' && memory_addr[i] >= '0') {
+            binary = (binary*16) + (memory_addr[i] - '0');
+        } else {
+            if(memory_addr[i] == 'a' || memory_addr[i] == 'A') {
+                binary = (binary*16) + 10;
+            }
+            if(memory_addr[i] == 'b' || memory_addr[i] == 'B') {
+                binary = (binary*16) + 11;
+            }
+            if(memory_addr[i] == 'c' || memory_addr[i] == 'C') {
+                binary = (binary*16) + 12;
+            }
+            if(memory_addr[i] == 'd' || memory_addr[i] == 'D') {
+                binary = (binary*16) + 13;
+            }
+            if(memory_addr[i] == 'e' || memory_addr[i] == 'E') {
+                binary = (binary*16) + 14;
+            }
+            if(memory_addr[i] == 'f' || memory_addr[i] == 'F') {
+                binary = (binary*16) + 15;
+            }
+        }
+        i++;
+    }
+    #ifdef DBG
+        printf("%s converted to %llu\n", memory_addr, binary);
+    #endif
+    return binary;
+}
+
+
+
+ /* ========================================================================================================================================================
+ * Print Functions */
+void printFinalOutput(struct cache_t *cache){
+    // output cache type and information
+    printf("=============================================\n");
+    if(WAY_SIZE == 1) printf("L%d Cache type:    Direct-Mapped Cache\n", 1);
+    else if(WAY_SIZE == NUM_BLOCKS) printf("L%d Cache type:    Fully Associative Cache\n", 1);
+    else printf("L%d Cache type:    %d-Way Associative Cache\n", 1, WAY_SIZE);
+    printf("BLOCK SIZE = %d Bytes\n", BLOCK_SIZE);
+    printf("%d-WAY\n", WAY_SIZE);
+    printf("CACHE SIZE = %d Bytes\n", CACHE_SIZE);
+    printf("NUMBER OF BLOCKS = %d\n", NUM_BLOCKS);
+    printf("NUMBER OF SETS = %d\n", NUM_SETS);
+    printf("================LOCAL RESULTS================\n");
+    /*Print out the results*/
+    printf("Cache Hits:    %d\n", cache->hits);
+    printf("Cache Misses:  %d\n", cache->misses);
+    printf("Cache Hit Rate:    %f\n", (double)cache->hits/(double)(cache->hits + cache->misses));
+    printf("Cache Miss Rate:   %f\n", (double)cache->misses/(double)(cache->hits + cache->misses));
+    printf("=============================================\n");
+}
+
+
 void printUsage(char *argv){
     // print the usage to run the program from the command line
     printf("Usage: %s <direct, n-way, fully> <options> <trace file name>\n", argv);
@@ -252,25 +290,4 @@ void printHelp(char *argv){
     printf("\tWill print out this help menu and exit the program.\n");
     printf("\tNote: With this option <direct, n-way, fully> and <trace file name> arguements are no longer required.\n");
     printf("\t      This option will not run the cache even if <direct, n-way, fully> and <trace file name> arguements are provided.\n");
-}
-
-
-void printFinalOutput(struct cache_t *cache){
-    // output cache type and information
-    printf("=============================================\n");
-    if(WAY_SIZE == 1) printf("L%d Cache type:    Direct-Mapped Cache\n", 1);
-    else if(WAY_SIZE == NUM_BLOCKS) printf("L%d Cache type:    Fully Associative Cache\n", 1);
-    else printf("L%d Cache type:    %d-Way Associative Cache\n", 1, WAY_SIZE);
-    printf("BLOCK SIZE = %d Bytes\n", BLOCK_SIZE);
-    printf("%d-WAY\n", WAY_SIZE);
-    printf("CACHE SIZE = %d Bytes\n", CACHE_SIZE);
-    printf("NUMBER OF BLOCKS = %d\n", NUM_BLOCKS);
-    printf("NUMBER OF SETS = %d\n", NUM_SETS);
-    printf("================LOCAL RESULTS================\n");
-    /*Print out the results*/
-    printf("Cache Hits:    %d\n", cache->hits);
-    printf("Cache Misses:  %d\n", cache->misses);
-    printf("Cache Hit Rate:    %f\n", (double)cache->hits/(double)(cache->hits + cache->misses));
-    printf("Cache Miss Rate:   %f\n", (double)cache->misses/(double)(cache->hits + cache->misses));
-    printf("=============================================\n");
 }
