@@ -24,8 +24,8 @@ if ! test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 		if test -f "$CACHISM_DIR/Makefile"; then
 			make -C $CACHISM_DIR
 		else
-			gcc -c -o $CACHISM_DIR/multi_level_cachesim.o $CACHISM_DIR/multi_level_cachesim.c -lm
-			gcc -o $CACHISM_DIR/multi_level_cachesim.exe $CACHISM_DIR/multi_level_cachesim.o
+			gcc -c -o $CACHISM_DIR/multi_level_cachesim.o $CACHISM_DIR/multi_level_cachesim.c
+			gcc -o $CACHISM_DIR/multi_level_cachesim.exe $CACHISM_DIR/multi_level_cachesim.o -lm
 			rm $CACHISM_DIR/multi_level_cachesim.o
 		fi
 	else
