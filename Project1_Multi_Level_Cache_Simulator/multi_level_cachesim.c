@@ -11,9 +11,6 @@
 
 
 int main(int argc, char **argv){
-    argc = 3;
-    argv[1] = "2-level";
-    argv[2] = "trace_for_students/trace.hpcg";
     char *trace_file_name;
     FILE *fp;
     char mem_request[20];
