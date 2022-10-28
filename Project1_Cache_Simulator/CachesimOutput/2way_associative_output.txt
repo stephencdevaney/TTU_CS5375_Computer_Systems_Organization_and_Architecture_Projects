@@ -1,0 +1,481 @@
+Test all line sizes and cache sizes of a 2 way associative cache for all trace files:
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1024
+=============================================
+Cache Hits:    3
+Cache Misses:  9
+Cache Hit Rate:    0.250000
+Cache Miss Rate:   0.750000
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1024
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1024
+=============================================
+Cache Hits:    3
+Cache Misses:  17
+Cache Hit Rate:    0.150000
+Cache Miss Rate:   0.850000
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1024
+=============================================
+Cache Hits:    1047638
+Cache Misses:  2186417
+Cache Hit Rate:    0.323939
+Cache Miss Rate:   0.676061
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1024
+=============================================
+Cache Hits:    1271630
+Cache Misses:  228370
+Cache Hit Rate:    0.847753
+Cache Miss Rate:   0.152247
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    5
+Cache Misses:  7
+Cache Hit Rate:    0.416667
+Cache Miss Rate:   0.583333
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    1062447
+Cache Misses:  2171608
+Cache Hit Rate:    0.328519
+Cache Miss Rate:   0.671481
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    1281437
+Cache Misses:  218563
+Cache Hit Rate:    0.854291
+Cache Miss Rate:   0.145709
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    1059566
+Cache Misses:  2174489
+Cache Hit Rate:    0.327628
+Cache Miss Rate:   0.672372
+=============================================
+
+
+Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    1342219
+Cache Misses:  157781
+Cache Hit Rate:    0.894813
+Cache Miss Rate:   0.105187
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    1044010
+Cache Misses:  2190045
+Cache Hit Rate:    0.322818
+Cache Miss Rate:   0.677182
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    1267592
+Cache Misses:  232408
+Cache Hit Rate:    0.845061
+Cache Miss Rate:   0.154939
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    1062172
+Cache Misses:  2171883
+Cache Hit Rate:    0.328433
+Cache Miss Rate:   0.671567
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    1297992
+Cache Misses:  202008
+Cache Hit Rate:    0.865328
+Cache Miss Rate:   0.134672
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    1070140
+Cache Misses:  2163915
+Cache Hit Rate:    0.330897
+Cache Miss Rate:   0.669103
+=============================================
+
+
+Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    2-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+2-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 512
+=============================================
+Cache Hits:    1317757
+Cache Misses:  182243
+Cache Hit Rate:    0.878505
+Cache Miss Rate:   0.121495
+=============================================

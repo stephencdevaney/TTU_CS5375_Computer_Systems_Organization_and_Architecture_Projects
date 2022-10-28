@@ -1,0 +1,481 @@
+Test all line sizes and cache sizes of a fully associative cache for all trace files:
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 16 Bytes
+2048-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    3
+Cache Misses:  9
+Cache Hit Rate:    0.250000
+Cache Miss Rate:   0.750000
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 16 Bytes
+2048-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 16 Bytes
+2048-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    3
+Cache Misses:  17
+Cache Hit Rate:    0.150000
+Cache Miss Rate:   0.850000
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 16 Bytes
+2048-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1054393
+Cache Misses:  2179662
+Cache Hit Rate:    0.326028
+Cache Miss Rate:   0.673972
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 16 Bytes
+2048-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1288305
+Cache Misses:  211695
+Cache Hit Rate:    0.858870
+Cache Miss Rate:   0.141130
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 32 Bytes
+1024-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    5
+Cache Misses:  7
+Cache Hit Rate:    0.416667
+Cache Miss Rate:   0.583333
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 32 Bytes
+1024-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 32 Bytes
+1024-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 32 Bytes
+1024-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1069000
+Cache Misses:  2165055
+Cache Hit Rate:    0.330545
+Cache Miss Rate:   0.669455
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 32 Bytes
+1024-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1299075
+Cache Misses:  200925
+Cache Hit Rate:    0.866050
+Cache Miss Rate:   0.133950
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 128 Bytes
+256-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 128 Bytes
+256-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 128 Bytes
+256-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 128 Bytes
+256-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1078542
+Cache Misses:  2155513
+Cache Hit Rate:    0.333495
+Cache Miss Rate:   0.666505
+=============================================
+
+
+Simulating fully associative cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 128 Bytes
+256-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1370108
+Cache Misses:  129892
+Cache Hit Rate:    0.913405
+Cache Miss Rate:   0.086595
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1076578
+Cache Misses:  2157477
+Cache Hit Rate:    0.332888
+Cache Miss Rate:   0.667112
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1324983
+Cache Misses:  175017
+Cache Hit Rate:    0.883322
+Cache Miss Rate:   0.116678
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1076578
+Cache Misses:  2157477
+Cache Hit Rate:    0.332888
+Cache Miss Rate:   0.667112
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1324983
+Cache Misses:  175017
+Cache Hit Rate:    0.883322
+Cache Miss Rate:   0.116678
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1076578
+Cache Misses:  2157477
+Cache Hit Rate:    0.332888
+Cache Miss Rate:   0.667112
+=============================================
+
+
+Simulating fully associative cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    Fully Associative Cache
+BLOCK SIZE = 64 Bytes
+1024-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 1
+=============================================
+Cache Hits:    1324983
+Cache Misses:  175017
+Cache Hit Rate:    0.883322
+Cache Miss Rate:   0.116678
+=============================================

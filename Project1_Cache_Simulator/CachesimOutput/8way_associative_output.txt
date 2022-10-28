@@ -1,0 +1,481 @@
+Test all line sizes and cache sizes of a 8 way associative cache for all trace files:
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    3
+Cache Misses:  9
+Cache Hit Rate:    0.250000
+Cache Miss Rate:   0.750000
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    3
+Cache Misses:  17
+Cache Hit Rate:    0.150000
+Cache Miss Rate:   0.850000
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    1048018
+Cache Misses:  2186037
+Cache Hit Rate:    0.324057
+Cache Miss Rate:   0.675943
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 16 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
+NUMBER OF SETS = 256
+=============================================
+Cache Hits:    1278685
+Cache Misses:  221315
+Cache Hit Rate:    0.852457
+Cache Miss Rate:   0.147543
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    5
+Cache Misses:  7
+Cache Hit Rate:    0.416667
+Cache Miss Rate:   0.583333
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    1062536
+Cache Misses:  2171519
+Cache Hit Rate:    0.328546
+Cache Miss Rate:   0.671454
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 32 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    1288758
+Cache Misses:  211242
+Cache Hit Rate:    0.859172
+Cache Miss Rate:   0.140828
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    1061220
+Cache Misses:  2172835
+Cache Hit Rate:    0.328139
+Cache Miss Rate:   0.671861
+=============================================
+
+
+Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 128 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    1344925
+Cache Misses:  155075
+Cache Hit Rate:    0.896617
+Cache Miss Rate:   0.103383
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    1059468
+Cache Misses:  2174587
+Cache Hit Rate:    0.327597
+Cache Miss Rate:   0.672403
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 32
+=============================================
+Cache Hits:    1294861
+Cache Misses:  205139
+Cache Hit Rate:    0.863241
+Cache Miss Rate:   0.136759
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 64
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 64
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 64
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 64
+=============================================
+Cache Hits:    1060039
+Cache Misses:  2174016
+Cache Hit Rate:    0.327774
+Cache Miss Rate:   0.672226
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 64
+=============================================
+Cache Hits:    1303173
+Cache Misses:  196827
+Cache Hit Rate:    0.868782
+Cache Miss Rate:   0.131218
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    1070072
+Cache Misses:  2163983
+Cache Hit Rate:    0.330876
+Cache Miss Rate:   0.669124
+=============================================
+
+
+Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
+=============================================
+Cache type:    8-Way Associative Cache
+BLOCK SIZE = 64 Bytes
+8-WAY
+CACHE SIZE = 65536 Bytes
+NUMBER OF BLOCKS = 1024
+NUMBER OF SETS = 128
+=============================================
+Cache Hits:    1317374
+Cache Misses:  182626
+Cache Hit Rate:    0.878249
+Cache Miss Rate:   0.121751
+=============================================
