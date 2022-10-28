@@ -50,6 +50,7 @@ int replacementPolicy(int);  // replacement policy utilized in cache_access func
 uint64_t convert_address(char memory[]);  // Read the memory traces and convert it to binary
 void parseArgs(int, char **, char **, FILE **, cache_t **);  // function to trim down code in main function and parse the arguements.
 void setupCache(cache_t *);
+int isPowerOfTwo(int);
 
 // Print Function Prototypes
 void printFinalOutput(cache_t *cache);  // print function for final output

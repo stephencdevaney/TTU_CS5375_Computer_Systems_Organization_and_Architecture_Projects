@@ -273,6 +273,11 @@ void parseArgs(int argc, char **argv, char **trace_file_name, FILE **fp, cache_t
                     printUsage(argv[0]);
                     exit(1);
                 }
+                else if(!isPowerOfTwo((*multilevel_cache)[BLOCK_SIZE_index - 1].BLOCK_SIZE)){
+                    printf("%s: invalid argument for option '-%c (MUST BE A POWER OF TWO!)'\n", argv[0], optopt);
+                    printUsage(argv[0]);
+                    exit(1);
+                }
                 break;
             case 'c':  // cache size
                 if(CACHE_SIZE_index < LEVEL) (*multilevel_cache)[CACHE_SIZE_index++].CACHE_SIZE = atoi(optarg);
@@ -284,6 +289,11 @@ void parseArgs(int argc, char **argv, char **trace_file_name, FILE **fp, cache_t
                 }
                 if((*multilevel_cache)[CACHE_SIZE_index - 1].CACHE_SIZE <= 0){
                     printf("%s: invalid argument for option '-%c'\n", argv[0], optopt);
+                    printUsage(argv[0]);
+                    exit(1);
+                }
+                else if(!isPowerOfTwo((*multilevel_cache)[CACHE_SIZE_index - 1].CACHE_SIZE)){
+                    printf("%s: invalid argument for option '-%c (MUST BE A POWER OF TWO!)'\n", argv[0], optopt);
                     printUsage(argv[0]);
                     exit(1);
                 }
@@ -301,6 +311,11 @@ void parseArgs(int argc, char **argv, char **trace_file_name, FILE **fp, cache_t
 }
 
 
+int isPowerOfTwo(int n){
+    return (ceil(log2(n)) == floor(log2(n)));
+}
+
+
 void setupCache(cache_t *multilevel_cache){
     // Name: setupCache
     // Input: multilevel_cache[LEVEL]: partially intialized array of caches
@@ -312,7 +327,7 @@ void setupCache(cache_t *multilevel_cache){
     if(multilevel_cache[0].BLOCK_SIZE == -1) multilevel_cache[0].BLOCK_SIZE = 64;
     multilevel_cache[0].NUM_BLOCKS = multilevel_cache[0].CACHE_SIZE/multilevel_cache[0].BLOCK_SIZE;
     if(multilevel_cache[0].WAY_SIZE == -1) multilevel_cache[0].WAY_SIZE = 2;
-    else if(multilevel_cache[0].WAY_SIZE > multilevel_cache[0].NUM_BLOCKS || multilevel_cache[0].WAY_SIZE == INT_MAX) multilevel_cache[0].WAY_SIZE = multilevel_cache[0].NUM_BLOCKS;
+    else if(multilevel_cache[0].WAY_SIZE > multilevel_cache[0].NUM_BLOCKS) multilevel_cache[0].WAY_SIZE = multilevel_cache[0].NUM_BLOCKS;
     multilevel_cache[0].NUM_SETS = multilevel_cache[0].NUM_BLOCKS/multilevel_cache[0].WAY_SIZE;
     
     // Initialization for first level
@@ -333,7 +348,7 @@ void setupCache(cache_t *multilevel_cache){
         if(multilevel_cache[i].BLOCK_SIZE == -1) multilevel_cache[i].BLOCK_SIZE = multilevel_cache[i - 1].BLOCK_SIZE;
         multilevel_cache[i].NUM_BLOCKS = multilevel_cache[i].CACHE_SIZE/multilevel_cache[i].BLOCK_SIZE;
         if(multilevel_cache[i].WAY_SIZE == -1) multilevel_cache[i].WAY_SIZE = multilevel_cache[i-1].WAY_SIZE * 4;
-        else if(multilevel_cache[i].WAY_SIZE > multilevel_cache[i].NUM_BLOCKS || multilevel_cache[i].WAY_SIZE == INT_MAX) multilevel_cache[i].WAY_SIZE = multilevel_cache[i].NUM_BLOCKS;
+        else if(multilevel_cache[i].WAY_SIZE > multilevel_cache[i].NUM_BLOCKS) multilevel_cache[i].WAY_SIZE = multilevel_cache[i].NUM_BLOCKS;
         multilevel_cache[i].NUM_SETS = multilevel_cache[i].NUM_BLOCKS/multilevel_cache[i].WAY_SIZE;
         
         // Initialization for lower levels
