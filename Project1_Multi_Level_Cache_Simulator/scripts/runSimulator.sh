@@ -109,5 +109,5 @@ if test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 		rm -f $CACHISM_DIR/*.exe $CACHISM_DIR/*.o
 	fi
 else
-	echo "Unable to run cache simulator cachesim.exe not found!"
+	echo "Unable to run cache simulator multi_level_cachesim.exe not found!"
 fi
