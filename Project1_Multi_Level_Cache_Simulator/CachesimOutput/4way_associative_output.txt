@@ -2,1200 +2,510 @@ Test all line sizes and cache sizes of a 4 way associative cache for all trace f
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile hw5_memoryaddr.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 16 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
 NUMBER OF SETS = 512
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    3
+Cache Misses:  9
+Cache Hit Rate:    0.250000
+Cache Miss Rate:   0.750000
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 16 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
 NUMBER OF SETS = 512
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_20.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 16 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
 NUMBER OF SETS = 512
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    3
+Cache Misses:  17
+Cache Hit Rate:    0.150000
+Cache Miss Rate:   0.850000
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 16 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
 NUMBER OF SETS = 512
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1047860
+Cache Misses:  2186195
+Cache Hit Rate:    0.324008
+Cache Miss Rate:   0.675992
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.hpcg.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 16 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 2048
 NUMBER OF SETS = 512
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1276779
+Cache Misses:  223221
+Cache Hit Rate:    0.851186
+Cache Miss Rate:   0.148814
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 32 Bytes
+CACHE SIZE = 32768 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    5
+Cache Misses:  7
+Cache Hit Rate:    0.416667
+Cache Miss Rate:   0.583333
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_10.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 32 Bytes
+CACHE SIZE = 32768 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 32 Bytes
+CACHE SIZE = 32768 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 32 Bytes
+CACHE SIZE = 32768 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1062506
+Cache Misses:  2171549
+Cache Hit Rate:    0.328537
+Cache Miss Rate:   0.671463
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 32 Bytes
+CACHE SIZE = 32768 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1287080
+Cache Misses:  212920
+Cache Hit Rate:    0.858053
+Cache Miss Rate:   0.141947
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile hw5_memoryaddr.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 128 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 128 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_20.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 128 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 128 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1062122
+Cache Misses:  2171933
+Cache Hit Rate:    0.328418
+Cache Miss Rate:   0.671582
 =============================================
 
 
 
 Simulating 4 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.hpcg.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
+BLOCK SIZE = 128 Bytes
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1347975
+Cache Misses:  152025
+Cache Hit Rate:    0.898650
+Cache Miss Rate:   0.101350
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile hw5_memoryaddr.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_10.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_20.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1037043
+Cache Misses:  2197012
+Cache Hit Rate:    0.320663
+Cache Miss Rate:   0.679337
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.hpcg.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 16384 Bytes
+NUMBER OF BLOCKS = 256
+NUMBER OF SETS = 64
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1268376
+Cache Misses:  231624
+Cache Hit Rate:    0.845584
+Cache Miss Rate:   0.154416
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile hw5_memoryaddr.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 128
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_10.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 128
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_20.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 128
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 128
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1062081
+Cache Misses:  2171974
+Cache Hit Rate:    0.328405
+Cache Miss Rate:   0.671595
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.hpcg.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
-CACHE SIZE = 65536 Bytes
-NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+CACHE SIZE = 32768 Bytes
+NUMBER OF BLOCKS = 512
+NUMBER OF SETS = 128
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1304162
+Cache Misses:  195838
+Cache Hit Rate:    0.869441
+Cache Miss Rate:   0.130559
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
 CACHE SIZE = 65536 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    7
+Cache Misses:  5
+Cache Hit Rate:    0.583333
+Cache Miss Rate:   0.416667
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
 CACHE SIZE = 65536 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    0
+Cache Misses:  10
+Cache Hit Rate:    0.000000
+Cache Miss Rate:   1.000000
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
 CACHE SIZE = 65536 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    4
+Cache Misses:  16
+Cache Hit Rate:    0.200000
+Cache Miss Rate:   0.800000
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
 CACHE SIZE = 65536 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1070065
+Cache Misses:  2163990
+Cache Hit Rate:    0.330874
+Cache Miss Rate:   0.669126
 =============================================
 
 
 
 Simulating 4 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
-================GLOBAL RESULTS===============
-LEVELS: 2
----------------------------------------------
-Cache Hits:    1327891
-Cache Misses:  172109
-Cache Hit Rate:    0.885261
-Cache Miss Rate:   0.114739
-=============================================
-
 ===============L1 LOCAL RESULTS==============
-Cache type:    2-Way Associative Cache
-WAY SIZE = 2
+Cache type:    4-Way Associative Cache
+WAY SIZE = 4
 BLOCK SIZE = 64 Bytes
 CACHE SIZE = 65536 Bytes
 NUMBER OF BLOCKS = 1024
-NUMBER OF SETS = 512
+NUMBER OF SETS = 256
 ---------------------------------------------
-Cache Hits:    1317755
-Cache Misses:  182245
-Cache Hit Rate:    0.878503
-Cache Miss Rate:   0.121497
-=============================================
-
-===============L2 LOCAL RESULTS==============
-Cache type:    8-Way Associative Cache
-WAY SIZE = 8
-BLOCK SIZE = 64 Bytes
-CACHE SIZE = 1048576 Bytes
-NUMBER OF BLOCKS = 16384
-NUMBER OF SETS = 2048
----------------------------------------------
-Cache Hits:    10136
-Cache Misses:  172109
-Cache Hit Rate:    0.055617
-Cache Miss Rate:   0.944383
+Cache Hits:    1316975
+Cache Misses:  183025
+Cache Hit Rate:    0.877983
+Cache Miss Rate:   0.122017
 =============================================
 
