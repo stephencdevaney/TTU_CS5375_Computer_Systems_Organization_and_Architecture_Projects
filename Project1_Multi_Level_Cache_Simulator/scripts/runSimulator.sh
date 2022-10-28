@@ -48,7 +48,7 @@ if test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 		echo -e "Simulating Direct-Mapped Cache for all trace files:" > $CACHISM_DIR/CachesimOutput/direct_mapped_output.txt
 		for i in ${!trace_files[@]}; do
 			echo -e "\n\nSimulating Direct Mapped Cache on tracefile ${trace_files[$i]}:" >> $CACHISM_DIR/CachesimOutput/direct_mapped_output.txt
-			$CACHISM_DIR/multi_level_cachesim.exe 1-level -d -b 64 -c 32768 $CACHISM_DIR/trace_for_students/${trace_files[$i]} >> $CACHISM_DIR/CachesimOutput/direct_mapped_output.txt
+			$CACHISM_DIR/multi_level_cachesim.exe 1-level -d -c 32768 $CACHISM_DIR/trace_for_students/${trace_files[$i]} >> $CACHISM_DIR/CachesimOutput/direct_mapped_output.txt
 		done
 	fi
 
@@ -68,7 +68,7 @@ if test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 			for j in ${!cache_size[@]}; do
 				for k in ${!trace_files[@]}; do
 					echo -e "\n\nSimulating ${way[$i]} cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$j]} bytes on tracefile ${trace_files[$k]}." >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
-					$CACHISM_DIR/multi_level_cachesim.exe 1-level -n ${way[i]} -b 64 -c ${cache_size[$j]} $CACHISM_DIR/trace_for_students/${trace_files[$k]} >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
+					$CACHISM_DIR/multi_level_cachesim.exe 1-level -n ${way[i]} -c ${cache_size[$j]} $CACHISM_DIR/trace_for_students/${trace_files[$k]} >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 				done
 			done
 		done
@@ -88,17 +88,18 @@ if test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 		for j in ${!cache_size[@]}; do
 			for j in ${!trace_files[@]}; do
 				echo -e "\n\nSimulating fully associative cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$i]} bytes on tracefile ${trace_files[$j]}." >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
-				$CACHISM_DIR/multi_level_cachesim.exe 1-level -f -b 64 -c ${cache_size[$i]} $CACHISM_DIR/trace_for_students/${trace_files[$j]} >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
+				$CACHISM_DIR/multi_level_cachesim.exe 1-level -f -c ${cache_size[$i]} $CACHISM_DIR/trace_for_students/${trace_files[$j]} >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
 			done
 		done
 	fi
 
-
-	if [[ $RUN_FULLY_ASSOCIATIVE == true ]] ; then
+	# Runs a 2 LEVEL Cache if RUN_2LEVEL is true.
+	if [[ RUN_2LEVEL == true ]] ; then
 		echo -e "Test a 2-level where L1 is a 2-way cache with a block size of 64 bytes and a cache size of 65536 bytes and where L2 is a 8-way cache with a block size of 64 bytes and a cache size of 1048576 bytes for all trace files:" > $CACHISM_DIR/CachesimOutput/multilevel_output.txt
 		for i in ${!trace_files[@]}; do
 			echo -e "\n\nSimulating 2-Level Cache on tracefile ${trace_files[$i]}:" >> $CACHISM_DIR/CachesimOutput/multilevel_output.txt
 			$CACHISM_DIR/multi_level_cachesim.exe 2-level $CACHISM_DIR/trace_for_students/${trace_files[$i]} >> $CACHISM_DIR/CachesimOutput/multilevel_output.txt
+            echo -e "\n\n\n" >> $CACHISM_DIR/CachesimOutput/multilevel_output.txt
 		done
 	fi
 
