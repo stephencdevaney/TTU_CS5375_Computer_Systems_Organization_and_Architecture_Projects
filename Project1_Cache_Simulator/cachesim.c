@@ -158,7 +158,6 @@ void cache_access(struct cache_t *cache, uint64_t address){
             #ifdef DBG
                 printf("Hit!\n");
             #endif
-            // dependent on question answer may need multilevel cache policy for hit
             break;
         }
         else if (cache->valid_field[index * WAY_SIZE + way_index] == 0){  // Stops the loop when the first empty slot is found. This allows for the cache to fill from low index to high index.
@@ -180,8 +179,6 @@ void cache_access(struct cache_t *cache, uint64_t address){
         cache->tag_field[index * WAY_SIZE + way_index] = tag;
         cache->valid_field[index * WAY_SIZE + way_index] = 1;
         cache->dirty_field[index * WAY_SIZE + way_index] = 0;
-        
-        // need multilevel cache policy for miss
     }
 }
 
@@ -242,15 +239,15 @@ uint64_t convert_address(char memory_addr[]){
 void printFinalOutput(struct cache_t *cache){
     // output cache type and information
     printf("=============================================\n");
-    if(WAY_SIZE == 1) printf("L%d Cache type:    Direct-Mapped Cache\n", 1);
-    else if(WAY_SIZE == NUM_BLOCKS) printf("L%d Cache type:    Fully Associative Cache\n", 1);
-    else printf("L%d Cache type:    %d-Way Associative Cache\n", 1, WAY_SIZE);
+    if(WAY_SIZE == 1) printf("Cache type:    Direct-Mapped Cache\n");
+    else if(WAY_SIZE == NUM_BLOCKS) printf("Cache type:    Fully Associative Cache\n");
+    else printf("Cache type:    %d-Way Associative Cache\n", WAY_SIZE);
     printf("BLOCK SIZE = %d Bytes\n", BLOCK_SIZE);
     printf("%d-WAY\n", WAY_SIZE);
     printf("CACHE SIZE = %d Bytes\n", CACHE_SIZE);
     printf("NUMBER OF BLOCKS = %d\n", NUM_BLOCKS);
     printf("NUMBER OF SETS = %d\n", NUM_SETS);
-    printf("================LOCAL RESULTS================\n");
+    printf("=============================================\n");
     /*Print out the results*/
     printf("Cache Hits:    %d\n", cache->hits);
     printf("Cache Misses:  %d\n", cache->misses);
@@ -279,7 +276,7 @@ void printHelp(char *argv){
     printf("fully:\n");
     printf("\tSimulates a Fully Associative Cache.\n");
     
-    printf("\nOPTIONS: (all optional)\n");
+    printf("\n<options>: (all optional)\n");
     printf("--block_size, -b:\n");
     printf("\tSet a block size for the cache. (Must be a power of two and in bytes!)\n");
     printf("\tDefault for L1 is 64 bytes.\n");
@@ -290,4 +287,7 @@ void printHelp(char *argv){
     printf("\tWill print out this help menu and exit the program.\n");
     printf("\tNote: With this option <direct, n-way, fully> and <trace file name> arguements are no longer required.\n");
     printf("\t      This option will not run the cache even if <direct, n-way, fully> and <trace file name> arguements are provided.\n");
+    
+     printf("<trace file name>: (required)\n");
+     printf("\tPath from current working directory to the trace file.\n");
 }
