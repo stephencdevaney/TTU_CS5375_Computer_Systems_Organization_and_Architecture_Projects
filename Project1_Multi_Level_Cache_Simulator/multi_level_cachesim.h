@@ -1,8 +1,8 @@
 /*
- * CS3375 Computer Architecture
+ * CS5375 Computer Systems Organization and Architecture
  * Course Project
  * Cache Simulator Design and Development
- * FALL 2017
+ * FALL 2022
  * Orginal Simulator By Yong Chen Modified by Stephen Devaney
  */
 
@@ -18,7 +18,9 @@
 
 //#define DBG
 
+
 int LEVEL;                /* The levels of cache */
+
 
 /*The data structure of direct-mapped cache*/
 typedef struct ml_cache{
@@ -41,10 +43,10 @@ typedef struct ml_cache{
 
 
 // Cache Access Function Prototypes
-void cache_access(cache_t *cache, uint64_t address);  // Simulate cache access
+void cache_access(cache_t *cache, uint64_t address, int);  // Simulate cache access
 
 // Helper Function Prototypes
-int replacementPolicy();  // replacement policy utilized in cache_access function
+int replacementPolicy(int);  // replacement policy utilized in cache_access function
 uint64_t convert_address(char memory[]);  // Read the memory traces and convert it to binary
 void parseArgs(int, char **, char **, FILE **, cache_t **);  // function to trim down code in main function and parse the arguements.
 void setupCache(cache_t *);
