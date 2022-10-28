@@ -309,6 +309,8 @@ void setupCache(cache_t *multilevel_cache){
     // Input: multilevel_cache[LEVEL]: partially intialized array of caches
     // Output: multilevel_cache[LEVEL]: fully setup array of caches
     // Purpose: finalizes setup for the multilevel cache
+    
+    // value checks for first level. Used to see if a default value is needed or if the specified way size is too large. If it is too large fully assocative is used instead.
     if(multilevel_cache[0].CACHE_SIZE == -1) multilevel_cache[0].CACHE_SIZE = 65536;
     if(multilevel_cache[0].BLOCK_SIZE == -1) multilevel_cache[0].BLOCK_SIZE = 64;
     multilevel_cache[0].NUM_BLOCKS = multilevel_cache[0].CACHE_SIZE/multilevel_cache[0].BLOCK_SIZE;
@@ -316,7 +318,7 @@ void setupCache(cache_t *multilevel_cache){
     else if(multilevel_cache[0].WAY_SIZE > multilevel_cache[0].NUM_BLOCKS || multilevel_cache[0].WAY_SIZE == INT_MAX) multilevel_cache[0].WAY_SIZE = multilevel_cache[0].NUM_BLOCKS;
     multilevel_cache[0].NUM_SETS = multilevel_cache[0].NUM_BLOCKS/multilevel_cache[0].WAY_SIZE;
     
-        /* Initialization */
+    // Initialization for first level
     multilevel_cache[0].valid_field = (unsigned*)malloc(multilevel_cache[0].NUM_BLOCKS * sizeof(unsigned));
     multilevel_cache[0].dirty_field = (unsigned*)malloc(multilevel_cache[0].NUM_BLOCKS * sizeof(unsigned));
     multilevel_cache[0].tag_field = (uint64_t*)malloc(multilevel_cache[0].NUM_BLOCKS * sizeof(uint64_t));
@@ -328,6 +330,7 @@ void setupCache(cache_t *multilevel_cache){
     multilevel_cache[0].hits = 0;
     multilevel_cache[0].misses = 0;
     
+    // value checks for lower levels. Used to see if a default value is needed or if the specified way size is too large. If it is too large fully assocative is used instead.
     for(int i = 1; i < LEVEL; i++){
         if(multilevel_cache[i].CACHE_SIZE == -1) multilevel_cache[i].CACHE_SIZE = multilevel_cache[i - 1].CACHE_SIZE * 16;
         if(multilevel_cache[i].BLOCK_SIZE == -1) multilevel_cache[i].BLOCK_SIZE = multilevel_cache[i - 1].BLOCK_SIZE;
@@ -336,7 +339,7 @@ void setupCache(cache_t *multilevel_cache){
         else if(multilevel_cache[i].WAY_SIZE > multilevel_cache[i].NUM_BLOCKS || multilevel_cache[i].WAY_SIZE == INT_MAX) multilevel_cache[i].WAY_SIZE = multilevel_cache[i].NUM_BLOCKS;
         multilevel_cache[i].NUM_SETS = multilevel_cache[i].NUM_BLOCKS/multilevel_cache[i].WAY_SIZE;
         
-        /* Initialization */
+        // Initialization for lower levels
         multilevel_cache[i].valid_field = (unsigned*)malloc(multilevel_cache[i].NUM_BLOCKS * sizeof(unsigned));
         multilevel_cache[i].dirty_field = (unsigned*)malloc(multilevel_cache[i].NUM_BLOCKS * sizeof(unsigned));
         multilevel_cache[i].tag_field = (uint64_t*)malloc(multilevel_cache[i].NUM_BLOCKS * sizeof(uint64_t));
@@ -359,6 +362,8 @@ void printFinalOutput(cache_t *multilevel_cache){
     // Input: multilevel_cache[LEVEL]: array of caches
     // Output: cache informaion outputted to the console
     // Purpose: prints the final output of the cache to the console
+    
+    // print global cache results
     if(LEVEL > 1){
         printf("================GLOBAL RESULTS===============\n");
         // Print out global results
@@ -371,6 +376,7 @@ void printFinalOutput(cache_t *multilevel_cache){
         printf("=============================================\n\n");
     }
     
+    // print local level cache results
     for(int i = 0; i < LEVEL; i++){
         // output cache type and information
         printf("===============L%d LOCAL RESULTS==============\n", i+1);
@@ -409,10 +415,13 @@ void printHelp(char *argv){
     // Input: argv: file name/path 
     // Output: help outputted to the console
     // Purpose: print the help informaion reguarding options to run the program from the command line
+    
+    // print help information for n-level
     printf("<n-level>: (required)\n");
     printf("\tSimulates a single or multi level Cache.\n");
     printf("\tReplace 'n' by an integer to indicate the level size (lowest level cache).\n\n");
     
+    // print help information for all options
     printf("<options>: (all optional)\n");
     printf("--direct, -d:\n");
     printf("\tSets the current level cache to be direct mapped\n");
@@ -440,6 +449,7 @@ void printHelp(char *argv){
     printf("\tNote: With this option <n-level> and <trace file name> arguements are no longer required.\n");
     printf("\t      This option will not run the cache even if <n-level> and <trace file name> arguements are provided.\n\n");
     
-     printf("<trace file name>: (required)\n");
-     printf("\tPath from current working directory to the trace file.\n");
+    // print help infomation for the trace file
+    printf("<trace file name>: (required)\n");
+    printf("\tPath from current working directory to the trace file.\n");
 }
