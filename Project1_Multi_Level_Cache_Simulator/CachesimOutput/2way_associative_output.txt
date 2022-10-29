@@ -1,7 +1,7 @@
-Test all line sizes and cache sizes of a 2 way associative cache for all trace files:
+Test all line sizes and cache sizes of a 2-way associative cache for all trace files:
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile hw5_memoryaddr.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -21,7 +21,7 @@ Cache Miss Rate:   0.750000
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -41,7 +41,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_20.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -61,7 +61,7 @@ Cache Miss Rate:   0.850000
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -81,7 +81,7 @@ Cache Miss Rate:   0.676061
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.hpcg.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -101,7 +101,7 @@ Cache Miss Rate:   0.152247
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -121,7 +121,7 @@ Cache Miss Rate:   0.583333
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_10.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -141,7 +141,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -161,7 +161,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -181,7 +181,7 @@ Cache Miss Rate:   0.671481
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -201,7 +201,7 @@ Cache Miss Rate:   0.145709
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile hw5_memoryaddr.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -221,7 +221,7 @@ Cache Miss Rate:   0.416667
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -241,7 +241,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_20.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -261,7 +261,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -281,7 +281,7 @@ Cache Miss Rate:   0.672372
 
 
 
-Simulating 2 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.hpcg.
+Simulating 2-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -301,7 +301,7 @@ Cache Miss Rate:   0.105187
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile hw5_memoryaddr.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -321,7 +321,7 @@ Cache Miss Rate:   0.416667
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_10.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -341,7 +341,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_20.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -361,7 +361,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -381,7 +381,7 @@ Cache Miss Rate:   0.677182
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.hpcg.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -401,7 +401,7 @@ Cache Miss Rate:   0.154939
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile hw5_memoryaddr.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -421,7 +421,7 @@ Cache Miss Rate:   0.416667
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_10.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -441,7 +441,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_20.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -461,7 +461,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -481,7 +481,7 @@ Cache Miss Rate:   0.671567
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.hpcg.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -501,7 +501,7 @@ Cache Miss Rate:   0.134672
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -521,7 +521,7 @@ Cache Miss Rate:   0.416667
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -541,7 +541,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -561,7 +561,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2
@@ -581,7 +581,7 @@ Cache Miss Rate:   0.669103
 
 
 
-Simulating 2 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
+Simulating 2-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    2-Way Associative Cache
 WAY SIZE = 2

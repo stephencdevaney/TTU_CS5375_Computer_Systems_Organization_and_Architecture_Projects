@@ -1,7 +1,7 @@
-Test all line sizes and cache sizes of a 8 way associative cache for all trace files:
+Test all line sizes and cache sizes of a 8-way associative cache for all trace files:
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile hw5_memoryaddr.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -21,7 +21,7 @@ Cache Miss Rate:   0.750000
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -41,7 +41,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_20.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -61,7 +61,7 @@ Cache Miss Rate:   0.850000
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -81,7 +81,7 @@ Cache Miss Rate:   0.675943
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.hpcg.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -101,7 +101,7 @@ Cache Miss Rate:   0.147543
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -121,7 +121,7 @@ Cache Miss Rate:   0.583333
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_10.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -141,7 +141,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -161,7 +161,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -181,7 +181,7 @@ Cache Miss Rate:   0.671454
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -201,7 +201,7 @@ Cache Miss Rate:   0.140828
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile hw5_memoryaddr.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -221,7 +221,7 @@ Cache Miss Rate:   0.416667
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -241,7 +241,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_20.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -261,7 +261,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -281,7 +281,7 @@ Cache Miss Rate:   0.671861
 
 
 
-Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.hpcg.
+Simulating 8-way cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -301,7 +301,7 @@ Cache Miss Rate:   0.103383
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile hw5_memoryaddr.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -321,7 +321,7 @@ Cache Miss Rate:   0.416667
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_10.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -341,7 +341,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_20.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -361,7 +361,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -381,7 +381,7 @@ Cache Miss Rate:   0.672403
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.hpcg.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -401,7 +401,7 @@ Cache Miss Rate:   0.136759
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile hw5_memoryaddr.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -421,7 +421,7 @@ Cache Miss Rate:   0.416667
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_10.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -441,7 +441,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_20.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -461,7 +461,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -481,7 +481,7 @@ Cache Miss Rate:   0.672226
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.hpcg.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -501,7 +501,7 @@ Cache Miss Rate:   0.131218
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -521,7 +521,7 @@ Cache Miss Rate:   0.416667
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -541,7 +541,7 @@ Cache Miss Rate:   1.000000
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -561,7 +561,7 @@ Cache Miss Rate:   0.800000
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
@@ -581,7 +581,7 @@ Cache Miss Rate:   0.669124
 
 
 
-Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
+Simulating 8-way cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
 WAY SIZE = 8
