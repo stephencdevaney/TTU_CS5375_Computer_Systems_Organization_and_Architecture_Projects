@@ -57,10 +57,10 @@ if test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 	if [[ $RUN_NWAY_ASSOCIATIVE == true ]] ; then
 		#Test the N-Way Associative Cache for all ways, trace files, line sizes, and cache sizes and place all output into the respective n-way cache output file
 		for i in ${!way[@]}; do
-			echo -e "Test all line sizes and cache sizes of a ${way[i]} way associative cache for all trace files:" > $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
+			echo -e "Test all line sizes and cache sizes of a ${way[i]}-way associative cache for all trace files:" > $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 			for j in ${!line_size[@]}; do
 				for k in ${!trace_files[@]}; do
-					echo -e "\n\nSimulating ${way[$i]} cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$j]} bytes on tracefile ${trace_files[$k]}." >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
+					echo -e "\n\nSimulating ${way[$i]}-way cache with a fixed cache size of 32768 bytes and a line size of ${line_size[$j]} bytes on tracefile ${trace_files[$k]}." >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 					$CACHISM_DIR/multi_level_cachesim.exe 1-level -n ${way[i]} -b ${line_size[$j]} -c 32768 $CACHISM_DIR/trace_for_students/${trace_files[$k]} >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 				done
 			done
@@ -85,7 +85,7 @@ if test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 			done
 		done
 
-		for j in ${!cache_size[@]}; do
+		for i in ${!cache_size[@]}; do
 			for j in ${!trace_files[@]}; do
 				echo -e "\n\nSimulating fully associative cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$i]} bytes on tracefile ${trace_files[$j]}." >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
 				$CACHISM_DIR/multi_level_cachesim.exe 1-level -f -c ${cache_size[$i]} $CACHISM_DIR/trace_for_students/${trace_files[$j]} >> $CACHISM_DIR/CachesimOutput/fully_associative_output.txt
