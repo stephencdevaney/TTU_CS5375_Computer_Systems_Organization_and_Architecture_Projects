@@ -18,6 +18,9 @@ Cache Miss Rate:   0.750000
 
 
 
+
+
+
 Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -32,6 +35,9 @@ Cache Misses:  10
 Cache Hit Rate:    0.000000
 Cache Miss Rate:   1.000000
 =============================================
+
+
+
 
 
 
@@ -52,6 +58,9 @@ Cache Miss Rate:   0.850000
 
 
 
+
+
+
 Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 16 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -66,6 +75,9 @@ Cache Misses:  2186037
 Cache Hit Rate:    0.324057
 Cache Miss Rate:   0.675943
 =============================================
+
+
+
 
 
 
@@ -86,6 +98,9 @@ Cache Miss Rate:   0.147543
 
 
 
+
+
+
 Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -100,6 +115,9 @@ Cache Misses:  7
 Cache Hit Rate:    0.416667
 Cache Miss Rate:   0.583333
 =============================================
+
+
+
 
 
 
@@ -120,6 +138,9 @@ Cache Miss Rate:   1.000000
 
 
 
+
+
+
 Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -134,6 +155,9 @@ Cache Misses:  16
 Cache Hit Rate:    0.200000
 Cache Miss Rate:   0.800000
 =============================================
+
+
+
 
 
 
@@ -154,6 +178,9 @@ Cache Miss Rate:   0.671454
 
 
 
+
+
+
 Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 32 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -168,6 +195,9 @@ Cache Misses:  211242
 Cache Hit Rate:    0.859172
 Cache Miss Rate:   0.140828
 =============================================
+
+
+
 
 
 
@@ -188,6 +218,9 @@ Cache Miss Rate:   0.416667
 
 
 
+
+
+
 Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -202,6 +235,9 @@ Cache Misses:  10
 Cache Hit Rate:    0.000000
 Cache Miss Rate:   1.000000
 =============================================
+
+
+
 
 
 
@@ -222,6 +258,9 @@ Cache Miss Rate:   0.800000
 
 
 
+
+
+
 Simulating 8 cache with a fixed cache size of 32768 bytes and a line size of 128 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -236,6 +275,9 @@ Cache Misses:  2172835
 Cache Hit Rate:    0.328139
 Cache Miss Rate:   0.671861
 =============================================
+
+
+
 
 
 
@@ -256,6 +298,9 @@ Cache Miss Rate:   0.103383
 
 
 
+
+
+
 Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -270,6 +315,9 @@ Cache Misses:  5
 Cache Hit Rate:    0.583333
 Cache Miss Rate:   0.416667
 =============================================
+
+
+
 
 
 
@@ -290,6 +338,9 @@ Cache Miss Rate:   1.000000
 
 
 
+
+
+
 Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -304,6 +355,9 @@ Cache Misses:  16
 Cache Hit Rate:    0.200000
 Cache Miss Rate:   0.800000
 =============================================
+
+
+
 
 
 
@@ -324,6 +378,9 @@ Cache Miss Rate:   0.672403
 
 
 
+
+
+
 Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 16384 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -338,6 +395,9 @@ Cache Misses:  205139
 Cache Hit Rate:    0.863241
 Cache Miss Rate:   0.136759
 =============================================
+
+
+
 
 
 
@@ -358,6 +418,9 @@ Cache Miss Rate:   0.416667
 
 
 
+
+
+
 Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream_10.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -372,6 +435,9 @@ Cache Misses:  10
 Cache Hit Rate:    0.000000
 Cache Miss Rate:   1.000000
 =============================================
+
+
+
 
 
 
@@ -392,6 +458,9 @@ Cache Miss Rate:   0.800000
 
 
 
+
+
+
 Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 32768 bytes on tracefile trace.stream.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -406,6 +475,9 @@ Cache Misses:  2174016
 Cache Hit Rate:    0.327774
 Cache Miss Rate:   0.672226
 =============================================
+
+
+
 
 
 
@@ -426,6 +498,9 @@ Cache Miss Rate:   0.131218
 
 
 
+
+
+
 Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile hw5_memoryaddr.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -440,6 +515,9 @@ Cache Misses:  5
 Cache Hit Rate:    0.583333
 Cache Miss Rate:   0.416667
 =============================================
+
+
+
 
 
 
@@ -460,6 +538,9 @@ Cache Miss Rate:   1.000000
 
 
 
+
+
+
 Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.stream_20.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -474,6 +555,9 @@ Cache Misses:  16
 Cache Hit Rate:    0.200000
 Cache Miss Rate:   0.800000
 =============================================
+
+
+
 
 
 
@@ -494,6 +578,9 @@ Cache Miss Rate:   0.669124
 
 
 
+
+
+
 Simulating 8 cache with a fixed line size of 64 bytes and a cache size of 65536 bytes on tracefile trace.hpcg.
 ===============L1 LOCAL RESULTS==============
 Cache type:    8-Way Associative Cache
@@ -508,4 +595,7 @@ Cache Misses:  182626
 Cache Hit Rate:    0.878249
 Cache Miss Rate:   0.121751
 =============================================
+
+
+
 

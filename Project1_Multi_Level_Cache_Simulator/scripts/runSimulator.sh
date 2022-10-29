@@ -99,7 +99,6 @@ if test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 		for i in ${!trace_files[@]}; do
 			echo -e "\n\nSimulating 2-Level Cache on tracefile ${trace_files[$i]}:" >> $CACHISM_DIR/CachesimOutput/multilevel_output.txt
 			$CACHISM_DIR/multi_level_cachesim.exe 2-level $CACHISM_DIR/trace_for_students/${trace_files[$i]} >> $CACHISM_DIR/CachesimOutput/multilevel_output.txt
-            echo -e "\n\n\n" >> $CACHISM_DIR/CachesimOutput/multilevel_output.txt
 		done
 	fi
 

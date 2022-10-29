@@ -408,6 +408,7 @@ void printFinalOutput(cache_t *multilevel_cache){
         printf("Cache Miss Rate:   %f\n", (double)multilevel_cache[i].misses/(double)(multilevel_cache[i].hits + multilevel_cache[i].misses));
         printf("=============================================\n\n");
     }
+    printf("\n\n\n");
 }
 
 
