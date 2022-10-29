@@ -67,7 +67,7 @@ if test -f "$CACHISM_DIR/multi_level_cachesim.exe"; then
 
 			for j in ${!cache_size[@]}; do
 				for k in ${!trace_files[@]}; do
-					echo -e "\n\nSimulating ${way[$i]} cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$j]} bytes on tracefile ${trace_files[$k]}." >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
+					echo -e "\n\nSimulating ${way[$i]}-way cache with a fixed line size of 64 bytes and a cache size of ${cache_size[$j]} bytes on tracefile ${trace_files[$k]}." >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 					$CACHISM_DIR/multi_level_cachesim.exe 1-level -n ${way[i]} -c ${cache_size[$j]} $CACHISM_DIR/trace_for_students/${trace_files[$k]} >> $CACHISM_DIR/CachesimOutput/${way[$i]}way_associative_output.txt
 				done
 			done
