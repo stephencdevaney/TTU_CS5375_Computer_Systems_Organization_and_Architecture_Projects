@@ -1,11 +1,10 @@
 # README FOR CACHESIM.C VERSION ONLY (SINGLE LEVEL VERSION)
-/*
- * CS5375 Computer Systems Organization and Architecture
- * Course Project
- * Cache Simulator Design and Development
- * FALL 2022
- * Orginal Simulator By Yong Chen Modified by Stephen Devaney
- */
+CS5375 Computer Systems Organization and Architecture <br>
+Course Project<br>
+Cache Simulator Design and Development<br>
+FALL 2022<br>
+Orginal Simulator By Yong Chen Modified by Stephen Devaney<br>
+
 
 ## Requirements:
 To compile this project a C compiler is required. One can be found at https://www.mingw-w64.org/downloads/
