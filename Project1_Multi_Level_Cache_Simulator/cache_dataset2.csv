@@ -1,0 +1,6 @@
+trace_files,Single_Level,Multiple_Level
+trace.stream_10,0,0
+trace.stream_20,0.2,0.2
+hw2_q4_memoryaddr,0.583333,0.583333
+trace.stream,0.330897,0.333177
+trace.hpcg,0.878505,0.885261
