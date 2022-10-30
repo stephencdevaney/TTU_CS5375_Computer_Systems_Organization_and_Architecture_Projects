@@ -74,5 +74,6 @@
         		Will print out this help menu and exit the program.
         		Note: With this option <n-level> and <trace file name> arguements are no longer required.
            		This option will not run the cache even if <n-level> and <trace file name> arguements are provided.
+			
 	<trace file name>: (required)
         	Path from current working directory to the trace file.
