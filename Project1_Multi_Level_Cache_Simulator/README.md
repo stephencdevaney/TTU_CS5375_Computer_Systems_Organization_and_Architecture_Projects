@@ -53,7 +53,7 @@
 			Sets the current level cache to be direct mapped
         		Can be used multiple times for multiple levels of cache. Will be used in order
 		--nway, -n:
-      			Sets the current level cache to be n-way assocative
+			Sets the current level cache to be n-way assocative
         		Can be used multiple times for multiple levels of cache. Will be used in order
         		Replace 'n' by an integer to indicate the way size.
 		--fully, -f:
@@ -69,7 +69,7 @@
         		Can be used multiple times for multiple levels of cache. Will be used in order
 			Example: -c 65536 -c 131072 (64KB and 128KB)
         		Default for L1 is 65536 bytes which is 64KB. Default for lower levels will be multiplied by 16
-            		Example one arguement of 32768 is given for 2 levels: L1 CACHE_SIZE = 32768, L2 524288 (32KB and 512KB)
+			Example one arguement of 32768 is given for 2 levels: L1 CACHE_SIZE = 32768, L2 524288 (32KB and 512KB)
 		--help, -h:
         		Will print out this help menu and exit the program.
         		Note: With this option <n-level> and <trace file name> arguements are no longer required.
