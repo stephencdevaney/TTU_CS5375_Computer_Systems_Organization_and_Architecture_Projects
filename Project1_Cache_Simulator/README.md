@@ -1,3 +1,4 @@
+# README FOR CACHESIM.C VERSION ONLY (SINGLE LEVEL VERSION)
 /*
  * CS5375 Computer Systems Organization and Architecture
  * Course Project
@@ -5,10 +6,6 @@
  * FALL 2022
  * Orginal Simulator By Yong Chen Modified by Stephen Devaney
  */
-
-
-README FOR CACHESIM.C VERSION ONLY (SINGLE LEVEL VERSION)
-
 
 ## Requirements:
 To compile this project a C compiler is required. One can be found at https://www.mingw-w64.org/downloads/
