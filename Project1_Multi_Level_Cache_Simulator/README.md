@@ -62,14 +62,15 @@
 		--block_size, -b:
         		Set a block size for the cache. (Must be a power of two and in bytes!)
         		Can be used multiple times for multiple levels of cache. Will be used in order
-            		Example: -b 64 -b 128
+			Example: -b 64 -b 128
         		Default for L1 is 64 bytes. Default for lower level caches will be the same as the previous level.
 		--cache_size, -c:
         		Set the total size for the cache. (Must be a power of two and in bytes!)
         		Can be used multiple times for multiple levels of cache. Will be used in order
-           		Example: -c 65536 -c 131072 (64KB and 128KB)
+			Example: -c 65536 -c 131072 (64KB and 128KB)
         		Default for L1 is 65536 bytes which is 64KB. Default for lower levels will be multiplied by 16
-            		Example one arguement of 32768 is given for 2 levels: L1 CACHE_SIZE = 32768, L2 524288 (32KB and 512KB)--help, -h:
+            		Example one arguement of 32768 is given for 2 levels: L1 CACHE_SIZE = 32768, L2 524288 (32KB and 512KB)
+		--help, -h:
         		Will print out this help menu and exit the program.
         		Note: With this option <n-level> and <trace file name> arguements are no longer required.
            		This option will not run the cache even if <n-level> and <trace file name> arguements are provided.
