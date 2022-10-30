@@ -48,11 +48,9 @@ Running the program on linux:
 	multi_level_cachesim.exe <n-level> <options> <trace file name>
 	Help Usage 1: multi_level_cachesim.exe --help
 	Help Usage 2: multi_level_cachesim.exe --h
-
 <n-level>: (required)
         Simulates a single or multi level Cache.
         Replace 'n' by an integer to indicate the level size (lowest level cache).
-
 <options>: (all optional)
 	--direct, -d:
 		Sets the current level cache to be direct mapped
@@ -78,6 +76,5 @@ Running the program on linux:
         	Will print out this help menu and exit the program.
         	Note: With this option <n-level> and <trace file name> arguements are no longer required.
            	This option will not run the cache even if <n-level> and <trace file name> arguements are provided.
-
 <trace file name>: (required)
         Path from current working directory to the trace file.
