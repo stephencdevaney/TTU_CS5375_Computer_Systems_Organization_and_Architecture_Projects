@@ -1,14 +1,9 @@
-/*
- * CS5375 Computer Systems Organization and Architecture
- * Course Project
- * Cache Simulator Design and Development
- * FALL 2022
- * Orginal Simulator By Yong Chen Modified by Stephen Devaney
- */
-
-
-
-README FOR multi_level_cachesim.C VERSION ONLY (Multi LEVEL VERSION)
+# README FOR multi_level_cachesim.C VERSION ONLY (Multi LEVEL VERSION)
+	CS5375 Computer Systems Organization and Architecture
+	Course Project
+	Cache Simulator Design and Development
+	FALL 2022
+	Orginal Simulator By Yong Chen Modified by Stephen Devaney
 
 
 
