@@ -3,9 +3,9 @@ Matrix Multiplication Kernel
 
 **Texas Tech University, CS5375 Computer Systems Organization and Architecture, Project**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) R# HERE.
-  * (TODO) TTU e-mail HERE.
+* Stephen Devaney
+  * R11549471
+  * stephen.c.devaney@ttu.edu
 
 ### (TODO: Your README)
 
