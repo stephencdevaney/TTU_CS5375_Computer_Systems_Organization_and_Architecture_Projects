@@ -9,26 +9,32 @@
 #SBATCH --account=cs5375
 #SBATCH --reservation=cs5375_gpu
 
-RUN_CPU=true
-RUN_GPU_P1=true
+RUN_CPU=false
+RUN_GPU_P1=false
+RUN_GPU_P2=true
 versions=()
 
 module load gcc cuda
 
 if [[ $RUN_CPU == true ]] ; then
 	make matrixMul_cpu
-	time ./matrixMul_cpu.exe &> matrixMul_cpu.txt
+	{ time ./matrixMul_cpu.exe; } &> matrixMul_cpu.txt
 fi
 if [[ $RUN_GPU_P1 == true ]] ; then
 	versions+="matrixMul_gpu_p1"
 fi
+if [[ $RUN_GPU_P2 == true ]] ; then
+        versions+="matrixMul_gpu_p2"
+fi
+
 
 for i in ${!versions[@]}; do
 	make ${versions[$i]}
-	time ./${versions[$i]}.exe &> ${versions[$i]}.txt
+	nvprof ./${versions[$i]}.exe &> ${versions[$i]}.txt
 done
 
 make clean
+rm *.err *.out
 
 #nvcc add_v5.cu -o add_v5.exe
 #nvprof ./add_v5.exe
