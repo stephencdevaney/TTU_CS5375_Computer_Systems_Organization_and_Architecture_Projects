@@ -1,7 +1,9 @@
 /*
  * _MATRIXMUL_GPU_CU_
  *
- * 2022 Mert SIDE
+ * Orginal code by Mert SIDE
+ * Updates by Stephen Devaney
+ * 2022
  *
  * CS5375 Computer Systems Organization and Architecture 
  * Guest Lecture: GPU Programming
@@ -50,10 +52,10 @@ int main(void)
   // Martices
   double *x, *y, *ans;
 
-  // TODO: Allocate Unified Memory - accessible from both CPU and GPU
-  // ...
-  // ...
-  // ...
+  // Allocate Unified Memory - accessible from both CPU and GPU *********************************************** Added by Stephen Devaney
+  cudaMallocManaged(&x, N*sizeof(double));
+  cudaMallocManaged(&y, N*sizeof(double));
+  cudaMallocManaged(&ans, N*sizeof(double));
 
   // ..........................................................................
   // initialize x,y and ans arrays on the host
@@ -87,10 +89,10 @@ int main(void)
 
   // ..........................................................................
   
-  // TODO: Free memory
-  // ...
-  // ...
-  // ...
+  // Free memory *********************************************** Added by Stephen Devaney
+  cudaFree(x);
+  cudaFree(y);
+  cudaFree(ans);
 
   return 0;
 }
