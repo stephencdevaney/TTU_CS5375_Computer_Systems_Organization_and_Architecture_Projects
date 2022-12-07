@@ -14,7 +14,6 @@ RUN_CPU=false
 RUN_GPU_P1=false
 RUN_GPU_P2=false
 RUN_GPU_P3=true
-RUN_GPU_P3_V2=false
 RUN_GPU_P4=false
 versions=()
 
@@ -34,9 +33,6 @@ if [[ $RUN_GPU_P2 == true ]] ; then
 fi
 if [[ $RUN_GPU_P3 == true ]] ; then
 	versions+=("matrixMul_gpu_p3")
-fi
-if [[ $RUN_GPU_P3_V2 == true ]] ; then
-        versions+=("matrixMul_gpu_p3_v2")
 fi
 if [[ $RUN_GPU_P4 == true ]] ; then
 	versions+=("matrixMul_gpu_p4")
