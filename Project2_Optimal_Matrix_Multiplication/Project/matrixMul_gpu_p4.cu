@@ -29,7 +29,7 @@ __global__ void init(int N, double *x, double *y, double *ans){
   
   for(int i = index; i < N*N; i+=AC){
     x[i] = 5;
-    y[i] = (i==(i/n+i/n*n)?1:0);
+    y[i] = (i==(i/N+i/N*N)?1:0);
     ans[i] = (double)0.000000000000;
   }
 }
@@ -66,7 +66,7 @@ int main(void){
   printf("Size of matrix (N) is %d by %d.\n", N, N);
   int iter = 3;
   clock_t t;
-  int blockSize = 256;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
+  int blockSize = 128;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
   int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   
   // Martices
