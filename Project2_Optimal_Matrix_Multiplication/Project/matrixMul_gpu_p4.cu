@@ -12,9 +12,27 @@
  *
  */
 
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+
+
+// ------------------------------------------------------------------ init (unified memory) *********************************************** added by Stephen Devaney in part 4
+__global__ void init(int N, double *x, double *y, double *ans){
+  int t = threadIdx.x;  // thread number of a thread inside of a particular block
+  int T = blockDim.x;  // total number of threads per block
+  int b = blockIdx.x;  // block number of a block inside the grid
+  int B = gridDim.x;  // total number of blocks per grid
+  int AC = (N/T) * (N/B);  // number of assigned cells (stride)
+  int index = b*T + t;  // threads index
+  
+  for(int i = index; i < N*N; i+=AC){
+    x[i] = 5;
+    y[i] = (i==j?1:0);
+    ans[i] = (double)0.000000000000;
+  }
+}
 
 // ------------------------------------------------------------------ GPUmatmul
 __global__ void GPUmatmul(int N, double *x, double *y, double *ans){
@@ -61,13 +79,7 @@ int main(void){
 
   // ..........................................................................
   // initialize x,y and ans arrays on the host
-  for (int i = 0; i < N; i++) {
-    for(int j = 0; j < N; j++) {
-      x[i*N+j] = 5;
-      y[i*N+j] = (i==j?1:0);
-      ans[i*N+j] = (double)0.000000000000;
-    }
-  }
+  init<<<numBlocks,blockSize>>>(N, x, y, ans);  // *********************************************** modified by Stephen Devaney in part 4
 
   // ..........................................................................
   double avg=0;
