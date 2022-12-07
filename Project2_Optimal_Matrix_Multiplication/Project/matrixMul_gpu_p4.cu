@@ -77,12 +77,20 @@ int main(void){
   cudaMallocManaged(&ans, N * N * sizeof(double));
   
   // ..........................................................................
+  // Prefetch the data to the GPU
+  int device = -1;
+  cudaGetDevice(&device);
+  cudaMemPrefetchAsync(x, N * N * sizeof(float), device, NULL);
+  cudaMemPrefetchAsync(y, N * N * sizeof(float), device, NULL);
+  cudaMemPrefetchAsync(ans, N * N * sizeof(float), device, NULL);
+  
+  // ..........................................................................
   // initialize x,y and ans arrays on the host
   init<<<numBlocks,blockSize>>>(N, x, y, ans);
   
   // ..........................................................................
   double avg=0;
-  std::cout<<"Starting unoptimized GPU computation"<<std::endl;
+  std::cout<<"Starting optimized GPU computation"<<std::endl;
   // Run kernel on GPU
   for(int i = 0; i <= iter; i++) {
     t = clock();
