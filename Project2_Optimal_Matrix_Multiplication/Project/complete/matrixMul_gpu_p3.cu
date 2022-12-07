@@ -30,6 +30,13 @@ void GPUmatmul(int N, double *x, double *y, double *ans){
           ans[i] += x[i/N+j] * y[i/N+j*N];
       }
   }
+//  for(int i = t; i < N; i+=T) {
+//    for(int j = 0; j < N; j++) {
+//      for(int k = 0; k < N; k++) {
+//        ans[i*N+j] += (x[i*N+k] * y[k*N+j]);
+//      }
+//    }
+//  }
 }
 
 // ---------------------------------------------------------------------- check

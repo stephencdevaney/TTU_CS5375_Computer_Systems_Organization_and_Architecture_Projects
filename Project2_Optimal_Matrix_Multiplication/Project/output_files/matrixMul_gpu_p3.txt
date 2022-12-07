@@ -1,0 +1,26 @@
+==11045== NVPROF is profiling process 11045, command: ./matrixMul_gpu_p3.exe
+Size of matrix (N) is 512 by 512.
+Starting unoptimized GPU computation
+It took 0.006000 ms on avg.
+RUN NOT OK.
+==11045== Profiling application: ./matrixMul_gpu_p3.exe
+==11045== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:  100.00%  90.855ms         4  22.714ms  22.383ms  23.687ms  GPUmatmul(int, double*, double*, double*)
+      API calls:   69.33%  208.06ms         3  69.353ms  10.588us  208.02ms  cudaMallocManaged
+                   30.40%  91.224ms         3  30.408ms  112.04us  90.989ms  cudaFree
+                    0.19%  567.97us         1  567.97us  567.97us  567.97us  cuDeviceTotalMem
+                    0.05%  146.93us       101  1.4540us     121ns  61.086us  cuDeviceGetAttribute
+                    0.02%  50.991us         4  12.747us  4.7620us  28.914us  cudaLaunchKernel
+                    0.01%  25.958us         1  25.958us  25.958us  25.958us  cuDeviceGetName
+                    0.00%  2.5380us         1  2.5380us  2.5380us  2.5380us  cuDeviceGetPCIBusId
+                    0.00%  1.0430us         3     347ns     166ns     696ns  cuDeviceGetCount
+                    0.00%     650ns         2     325ns     161ns     489ns  cuDeviceGet
+                    0.00%     243ns         1     243ns     243ns     243ns  cuDeviceGetUuid
+
+==11045== Unified Memory profiling result:
+Device "Tesla V100-PCIE-32GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+      26  160.00KB  4.0000KB  0.9961MB  4.062500MB  401.6000us  Host To Device
+      13         -         -         -           -  1.651744ms  Gpu page fault groups
+Total CPU Page faults: 18

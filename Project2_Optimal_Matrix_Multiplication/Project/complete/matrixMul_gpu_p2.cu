@@ -21,14 +21,12 @@ __global__
 void GPUmatmul(int N, double *x, double *y, double *ans){
   int t = threadIdx.x;  // thread number of a thread inside of a particular block *********************************************** added by Stephen Devaney in part 2
   int T = blockDim.x;  // total number of threads per block *********************************************** added by Stephen Devaney in part 2
-  int b = blockIdx.x;  // block number of a block inside the grid *********************************************** added by Stephen Devaney in part 3
-  int B = gridDim.x;  // total number of blocks per grid *********************************************** added by Stephen Devaney in part 3
-  int index = b*T + t;  // threads index
-  int AC = (N/T) * (N/B);  // number of assigned cells (stride) *********************************************** added by Stephen Devaney in part 3
-  for(int i = index; i < N*N; i+=AC){  // *********************************************** modified by Stephen Devaney in part 3
-      for(int j = 0; j < N; j++){
-          ans[i] += x[i/N+j] * y[i/N+j*N];
+  for(int i = t; i < N; i+=T) {
+    for(int j = 0; j < N; j++) {
+      for(int k = 0; k < N; k++) {
+        ans[i*N+j] += (x[i*N+k] * y[k*N+j]);
       }
+    }
   }
 }
 
@@ -70,13 +68,11 @@ int main(void){
 
   // ..........................................................................
   double avg=0;
-  int blockSize = 256;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
-  int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   std::cout<<"Starting unoptimized GPU computation"<<std::endl;
   // Run kernel on GPU
   for(int i = 0; i <= iter; i++) {
     t = clock();
-    GPUmatmul<<<numBlocks,blockSize>>>(N, x, y,ans); // *********************************************** updated by Stephen Devaney in part 2 and 3
+    GPUmatmul<<<1,256>>>(N, x, y,ans); // *********************************************** updated by Stephen Devaney in part 2
     cudaDeviceSynchronize();
     t = clock() - t;
     if(i) avg += t; //we will ignore the first run

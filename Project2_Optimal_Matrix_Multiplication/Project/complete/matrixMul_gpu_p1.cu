@@ -18,22 +18,20 @@
 
 // ------------------------------------------------------------------ GPUmatmul
 __global__
-void GPUmatmul(int N, double *x, double *y, double *ans){
-  int t = threadIdx.x;  // thread number of a thread inside of a particular block *********************************************** added by Stephen Devaney in part 2
-  int T = blockDim.x;  // total number of threads per block *********************************************** added by Stephen Devaney in part 2
-  int b = blockIdx.x;  // block number of a block inside the grid *********************************************** added by Stephen Devaney in part 3
-  int B = gridDim.x;  // total number of blocks per grid *********************************************** added by Stephen Devaney in part 3
-  int index = b*T + t;  // threads index
-  int AC = (N/T) * (N/B);  // number of assigned cells (stride) *********************************************** added by Stephen Devaney in part 3
-  for(int i = index; i < N*N; i+=AC){  // *********************************************** modified by Stephen Devaney in part 3
-      for(int j = 0; j < N; j++){
-          ans[i] += x[i/N+j] * y[i/N+j*N];
+void GPUmatmul(int N, double *x, double *y, double *ans)
+{
+  for(int i = 0; i < N; i++) {
+    for(int j = 0; j < N; j++) {
+      for(int k = 0; k < N; k++) {
+        ans[i*N+j] += (x[i*N+k] * y[k*N+j]);
       }
+    }
   }
 }
 
 // ---------------------------------------------------------------------- check
-bool check(int N, double *ans){
+bool check(int N, double *ans)
+{
   for(int i = 0; i < N; i++) {
     for(int j = 0; j < N; j++) {
       if(ans[i*N+j] != 20.0) return false;
@@ -43,7 +41,8 @@ bool check(int N, double *ans){
 }
 
 // ----------------------------------------------------------------------- MAIN
-int main(void){
+int main(void)
+{
   // size of matrix
   int N = 1<<9; // binary left-shift: 1 * 2^9 = 512
   printf("Size of matrix (N) is %d by %d.\n", N, N);
@@ -70,13 +69,11 @@ int main(void){
 
   // ..........................................................................
   double avg=0;
-  int blockSize = 256;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
-  int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   std::cout<<"Starting unoptimized GPU computation"<<std::endl;
   // Run kernel on GPU
   for(int i = 0; i <= iter; i++) {
     t = clock();
-    GPUmatmul<<<numBlocks,blockSize>>>(N, x, y,ans); // *********************************************** updated by Stephen Devaney in part 2 and 3
+    GPUmatmul<<<1,1>>>(N, x, y,ans);
     cudaDeviceSynchronize();
     t = clock() - t;
     if(i) avg += t; //we will ignore the first run
