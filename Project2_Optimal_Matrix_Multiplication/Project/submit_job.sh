@@ -9,12 +9,16 @@
 #SBATCH --account=cs5375
 #SBATCH --reservation=cs5375_gpu
 
+
 RUN_CPU=false
 RUN_GPU_P1=false
 RUN_GPU_P2=true
+RUN_GPU_P3=true
 versions=()
 
+
 module load gcc cuda
+
 
 if [[ $RUN_CPU == true ]] ; then
 	make matrixMul_cpu
@@ -25,6 +29,9 @@ if [[ $RUN_GPU_P1 == true ]] ; then
 fi
 if [[ $RUN_GPU_P2 == true ]] ; then
 	versions+=("matrixMul_gpu_p2")
+fi
+if [[ $RUN_GPU_P3 == true ]] ; then
+	versions+=("matrixMul_gpu_p3")
 fi
 
 
