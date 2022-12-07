@@ -52,7 +52,7 @@ int main(void)
   // Martices
   double *x, *y, *ans;
 
-  // Allocate Unified Memory - accessible from both CPU and GPU *********************************************** Added by Stephen Devaney
+  // Allocate Unified Memory - accessible from both CPU and GPU *********************************************** Added by Stephen Devaney in part 1
   cudaMallocManaged(&x, N * N * sizeof(double));
   cudaMallocManaged(&y, N * N * sizeof(double));
   cudaMallocManaged(&ans, N * N * sizeof(double));
@@ -89,7 +89,7 @@ int main(void)
 
   // ..........................................................................
   
-  // Free memory *********************************************** Added by Stephen Devaney
+  // Free memory *********************************************** Added by Stephen Devaney in part 1
   cudaFree(x);
   cudaFree(y);
   cudaFree(ans);
