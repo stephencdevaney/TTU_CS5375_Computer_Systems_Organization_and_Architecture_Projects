@@ -18,20 +18,25 @@
 
 // ------------------------------------------------------------------ GPUmatmul
 __global__
-void GPUmatmul(int N, double *x, double *y, double *ans)
-{
-  for(int i = 0; i < N; i++) {
-    for(int j = 0; j < N; j++) {
-      for(int k = 0; k < N; k++) {
-        ans[i*N+j] += (x[i*N+k] * y[k*N+j]);
-      }
+void GPUmatmul(int N, double *x, double *y, double *ans){
+  int t = threadIdx.x;  // thread number of a thread inside of a particular block *********************************************** added by Stephen Devaney in part 2
+  int T = blockDim.x;  // total number of threads per block *********************************************** added by Stephen Devaney in part 2
+  for(int i = t; i < N; i+=T){
+    for(int j = 0; j < N; j++){
+      ans[i] += x[i/N+j] * y[j*N+i/N]
     }
   }
+//  for(int i = 0; i < N; i++) {
+//    for(int j = 0; j < N; j++) {
+//      for(int k = 0; k < N; k++) {
+//        ans[i*N+j] += (x[i*N+k] * y[k*N+j]);
+//      }
+//    }
+//  }
 }
 
 // ---------------------------------------------------------------------- check
-bool check(int N, double *ans)
-{
+bool check(int N, double *ans){
   for(int i = 0; i < N; i++) {
     for(int j = 0; j < N; j++) {
       if(ans[i*N+j] != 20.0) return false;
@@ -41,8 +46,7 @@ bool check(int N, double *ans)
 }
 
 // ----------------------------------------------------------------------- MAIN
-int main(void)
-{
+int main(void){
   // size of matrix
   int N = 1<<9; // binary left-shift: 1 * 2^9 = 512
   printf("Size of matrix (N) is %d by %d.\n", N, N);
@@ -52,7 +56,7 @@ int main(void)
   // Martices
   double *x, *y, *ans;
 
-  // Allocate Unified Memory - accessible from both CPU and GPU *********************************************** Added by Stephen Devaney
+  // Allocate Unified Memory - accessible from both CPU and GPU *********************************************** Added by Stephen Devaney in part 1
   cudaMallocManaged(&x, N * N * sizeof(double));
   cudaMallocManaged(&y, N * N * sizeof(double));
   cudaMallocManaged(&ans, N * N * sizeof(double));
@@ -73,7 +77,7 @@ int main(void)
   // Run kernel on GPU
   for(int i = 0; i <= iter; i++) {
     t = clock();
-    GPUmatmul<<<1,1>>>(N, x, y,ans);
+    GPUmatmul<<<1,256>>>(N, x, y,ans); // *********************************************** updated by Stephen Devaney in part 2
     cudaDeviceSynchronize();
     t = clock() - t;
     if(i) avg += t; //we will ignore the first run
@@ -89,7 +93,7 @@ int main(void)
 
   // ..........................................................................
   
-  // Free memory *********************************************** Added by Stephen Devaney
+  // Free memory *********************************************** Added by Stephen Devaney in part 1
   cudaFree(x);
   cudaFree(y);
   cudaFree(ans);
