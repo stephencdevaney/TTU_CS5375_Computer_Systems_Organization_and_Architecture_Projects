@@ -17,8 +17,7 @@
 #include <stdlib.h>
 
 // ------------------------------------------------------------------ GPUmatmul
-__global__
-void GPUmatmul(int N, double *x, double *y, double *ans)
+__global__ void GPUmatmul(int N, double *x, double *y, double *ans)
 {
   for(int i = 0; i < N; i++) {
     for(int j = 0; j < N; j++) {

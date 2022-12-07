@@ -17,8 +17,7 @@
 #include <stdlib.h>
 
 // ------------------------------------------------------------------ GPUmatmul (unified memory) // *********************************************** added by Stephen Devaney in part 4
-__global__
-void init(int N, double *x, double *y, double *ans){
+__global__ void init(int N, double *x, double *y, double *ans){
   for (int i = 0; i < N; i++) {
     for(int j = 0; j < N; j++) {
       x[i*N+j] = 5;
@@ -30,8 +29,7 @@ void init(int N, double *x, double *y, double *ans){
 
 
 // ------------------------------------------------------------------ GPUmatmul
-__global__
-void GPUmatmul(int N, double *x, double *y, double *ans){
+__global__ void GPUmatmul(int N, double *x, double *y, double *ans){
   int t = threadIdx.x;  // thread number of a thread inside of a particular block *********************************************** added by Stephen Devaney in part 2
   int T = blockDim.x;  // total number of threads per block *********************************************** added by Stephen Devaney in part 2
   int b = blockIdx.x;  // block number of a block inside the grid *********************************************** added by Stephen Devaney in part 3
