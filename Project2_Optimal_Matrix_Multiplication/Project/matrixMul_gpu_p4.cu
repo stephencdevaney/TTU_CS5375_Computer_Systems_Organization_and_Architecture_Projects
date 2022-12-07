@@ -80,9 +80,9 @@ int main(void){
   // Prefetch the data to the GPU
   int device = -1;
   cudaGetDevice(&device);
-  cudaMemPrefetchAsync(x, N * N * sizeof(float), device, NULL);
-  cudaMemPrefetchAsync(y, N * N * sizeof(float), device, NULL);
-  cudaMemPrefetchAsync(ans, N * N * sizeof(float), device, NULL);
+  cudaMemPrefetchAsync(x, N * N * sizeof(double), device, NULL);
+  cudaMemPrefetchAsync(y, N * N * sizeof(double), device, NULL);
+  cudaMemPrefetchAsync(ans, N * N * sizeof(double), device, NULL);
   
   // ..........................................................................
   // initialize x,y and ans arrays on the host
