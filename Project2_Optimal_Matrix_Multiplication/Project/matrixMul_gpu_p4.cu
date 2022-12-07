@@ -16,6 +16,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ------------------------------------------------------------------ GPUmatmul (unified memory) // *********************************************** added by Stephen Devaney in part 4
+__global__
+void init(int N, double *x, double *y, double *ans){
+  for (int i = 0; i < N; i++) {
+    for(int j = 0; j < N; j++) {
+      x[i*N+j] = 5;
+      y[i*N+j] = (i==j?1:0);
+      ans[i*N+j] = (double)0.000000000000;
+    }
+  }
+}
+
+
 // ------------------------------------------------------------------ GPUmatmul
 __global__
 void GPUmatmul(int N, double *x, double *y, double *ans){
@@ -33,6 +46,7 @@ void GPUmatmul(int N, double *x, double *y, double *ans){
   }
 }
 
+
 // ---------------------------------------------------------------------- check
 bool check(int N, double *ans){
   for(int i = 0; i < N; i++) {
@@ -43,6 +57,7 @@ bool check(int N, double *ans){
   return true;
 }
 
+
 // ----------------------------------------------------------------------- MAIN
 int main(void){
   // size of matrix
@@ -50,6 +65,8 @@ int main(void){
   printf("Size of matrix (N) is %d by %d.\n", N, N);
   int iter = 3;
   clock_t t;
+  int blockSize = 128;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
+  int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   
   // Martices
   double *x, *y, *ans;
@@ -58,21 +75,13 @@ int main(void){
   cudaMallocManaged(&x, N * N * sizeof(double));
   cudaMallocManaged(&y, N * N * sizeof(double));
   cudaMallocManaged(&ans, N * N * sizeof(double));
-
+  
   // ..........................................................................
   // initialize x,y and ans arrays on the host
-  for (int i = 0; i < N; i++) {
-    for(int j = 0; j < N; j++) {
-      x[i*N+j] = 5;
-      y[i*N+j] = (i==j?1:0);
-      ans[i*N+j] = (double)0.000000000000;
-    }
-  }
-
+  init<<<numBlocks,blockSize>>>(N, x, y, ans);
+  
   // ..........................................................................
   double avg=0;
-  int blockSize = 128;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
-  int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   std::cout<<"Starting unoptimized GPU computation"<<std::endl;
   // Run kernel on GPU
   for(int i = 0; i <= iter; i++) {
