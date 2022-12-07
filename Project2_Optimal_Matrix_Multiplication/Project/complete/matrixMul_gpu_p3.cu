@@ -48,6 +48,8 @@ int main(void){
   printf("Size of matrix (N) is %d by %d.\n", N, N);
   int iter = 3;
   clock_t t;
+  int blockSize = 256;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
+  int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   
   // Martices
   double *x, *y, *ans;
@@ -69,8 +71,6 @@ int main(void){
 
   // ..........................................................................
   double avg=0;
-  int blockSize = 256;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
-  int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   std::cout<<"Starting unoptimized GPU computation"<<std::endl;
   // Run kernel on GPU
   for(int i = 0; i <= iter; i++) {
