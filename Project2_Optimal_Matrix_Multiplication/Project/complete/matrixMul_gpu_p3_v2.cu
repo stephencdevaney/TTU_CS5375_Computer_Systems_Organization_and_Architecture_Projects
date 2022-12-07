@@ -23,12 +23,13 @@ void GPUmatmul(int N, double *x, double *y, double *ans){
   int T = blockDim.x;  // total number of threads per block *********************************************** added by Stephen Devaney in part 2
   int b = blockIdx.x;  // block number of a block inside the grid *********************************************** added by Stephen Devaney in part 3
   int B = gridDim.x;  // total number of blocks per grid *********************************************** added by Stephen Devaney in part 3
-  int AC = (N*N) / (T*B);  // number of assigned cells (stride) *********************************************** added by Stephen Devaney in part 3
-  int index = (b*T + t) * AC;  // threads index
-  for(int i = index; i < index + AC; i++){  // *********************************************** modified by Stephen Devaney in part 2 and 3
-      for(int j = 0; j < N; j++){
-          ans[i] += x[i/N+j] * y[i/N+j*N];
+
+  for(int i = b; i < N; i+=B){  // *********************************************** modified by Stephen Devaney in part 2 and 3
+    for(int j = t; j < N; j+=T){
+      for(int k = 0; k < N; k++){
+        ans[i*N+j] += x[i*N+k] * y[k*N+j];
       }
+    }
   }
 }
 
