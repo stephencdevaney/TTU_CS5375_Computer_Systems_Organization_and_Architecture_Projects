@@ -1,6 +1,6 @@
 ==39592== NVPROF is profiling process 39592, command: ./matrixMul_gpu_p4.exe
 Size of matrix (N) is 512 by 512.
-Starting unoptimized GPU computation
+Starting optimized GPU computation
 It took 54.179667 ms on avg.
 RUN OK.
 ==39592== Profiling application: ./matrixMul_gpu_p4.exe
