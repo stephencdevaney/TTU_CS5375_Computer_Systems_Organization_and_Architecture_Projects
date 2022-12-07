@@ -53,9 +53,9 @@ int main(void)
   double *x, *y, *ans;
 
   // Allocate Unified Memory - accessible from both CPU and GPU *********************************************** Added by Stephen Devaney
-  cudaMallocManaged(&x, N*sizeof(double));
-  cudaMallocManaged(&y, N*sizeof(double));
-  cudaMallocManaged(&ans, N*sizeof(double));
+  cudaMallocManaged(&x, N * N * sizeof(double));
+  cudaMallocManaged(&y, N * N * sizeof(double));
+  cudaMallocManaged(&ans, N * N * sizeof(double));
 
   // ..........................................................................
   // initialize x,y and ans arrays on the host
