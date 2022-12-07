@@ -71,7 +71,7 @@ int main(void){
 
   // ..........................................................................
   double avg=0;
-  int blockSize = 256;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
+  int blockSize = 128;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
   int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   std::cout<<"Starting unoptimized GPU computation"<<std::endl;
   // Run kernel on GPU
