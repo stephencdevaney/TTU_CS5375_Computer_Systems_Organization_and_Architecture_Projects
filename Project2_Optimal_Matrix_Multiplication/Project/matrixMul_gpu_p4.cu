@@ -29,7 +29,7 @@ __global__ void init(int N, double *x, double *y, double *ans){
   
   for(int i = index; i < N*N; i+=AC){
     x[i] = 5;
-    y[i] = (i==j?1:0);
+    y[i] = (i==(i/n+i/n*n)?1:0);
     ans[i] = (double)0.000000000000;
   }
 }

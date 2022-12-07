@@ -64,7 +64,7 @@ int main(void){
   for (int i = 0; i < N; i++) {
     for(int j = 0; j < N; j++) {
       x[i*N+j] = 5;
-      y[i*N+j] = (i==(i/n+i/n*n)?1:0);
+      y[i*N+j] = (i==j?1:0);
       ans[i*N+j] = (double)0.000000000000;
     }
   }
