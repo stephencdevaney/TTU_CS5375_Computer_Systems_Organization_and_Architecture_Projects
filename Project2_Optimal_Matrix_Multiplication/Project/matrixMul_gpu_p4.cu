@@ -76,7 +76,15 @@ int main(void){
   cudaMallocManaged(&x, N * N * sizeof(double));
   cudaMallocManaged(&y, N * N * sizeof(double));
   cudaMallocManaged(&ans, N * N * sizeof(double));
-
+  
+  // ..........................................................................
+  // Prefetch the data to the GPU  // *********************************************** added by Stephen Devaney in part 4
+  int device = -1;
+  cudaGetDevice(&device);
+  cudaMemPrefetchAsync(x, N * N * sizeof(double), device, NULL);
+  cudaMemPrefetchAsync(y, N * N * sizeof(double), device, NULL);
+  cudaMemPrefetchAsync(ans, N * N * sizeof(double), device, NULL);
+  
   // ..........................................................................
   // initialize x,y and ans arrays on the host
   init<<<numBlocks,blockSize>>>(N, x, y, ans);  // *********************************************** modified by Stephen Devaney in part 4
