@@ -16,34 +16,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ------------------------------------------------------------------ GPUmatmul (unified memory) // *********************************************** added by Stephen Devaney in part 4
-__global__ void init(int N, double *x, double *y, double *ans){
-  for (int i = 0; i < N; i++) {
-    for(int j = 0; j < N; j++) {
-      x[i*N+j] = 5;
-      y[i*N+j] = (i==j?1:0);
-      ans[i*N+j] = (double)0.000000000000;
-    }
-  }
-}
-
-
 // ------------------------------------------------------------------ GPUmatmul
 __global__ void GPUmatmul(int N, double *x, double *y, double *ans){
   int t = threadIdx.x;  // thread number of a thread inside of a particular block *********************************************** added by Stephen Devaney in part 2
   int T = blockDim.x;  // total number of threads per block *********************************************** added by Stephen Devaney in part 2
   int b = blockIdx.x;  // block number of a block inside the grid *********************************************** added by Stephen Devaney in part 3
   int B = gridDim.x;  // total number of blocks per grid *********************************************** added by Stephen Devaney in part 3
-
-  for(int i = b; i < N; i+=B){  // *********************************************** modified by Stephen Devaney in part 2 and 3
-    for(int j = t; j < N; j+=T){
-      for(int k = 0; k < N; k++){
-        ans[i*N+j] += x[i*N+k] * y[k*N+j];
+  int AC = (N/T) * (N/B);  // number of assigned cells (stride) *********************************************** added by Stephen Devaney in part 3
+  int index = b*T + t;  // threads index
+  for(int i = index; i < N*N; i+=AC){  // *********************************************** modified by Stephen Devaney in part 3
+      for(int j = 0; j < N; j++){
+          ans[i] += x[i/N+j] * y[i/N+j*N];
       }
-    }
   }
 }
-
 
 // ---------------------------------------------------------------------- check
 bool check(int N, double *ans){
@@ -55,7 +41,6 @@ bool check(int N, double *ans){
   return true;
 }
 
-
 // ----------------------------------------------------------------------- MAIN
 int main(void){
   // size of matrix
@@ -63,8 +48,6 @@ int main(void){
   printf("Size of matrix (N) is %d by %d.\n", N, N);
   int iter = 3;
   clock_t t;
-  int blockSize = 128;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
-  int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
   
   // Martices
   double *x, *y, *ans;
@@ -73,22 +56,22 @@ int main(void){
   cudaMallocManaged(&x, N * N * sizeof(double));
   cudaMallocManaged(&y, N * N * sizeof(double));
   cudaMallocManaged(&ans, N * N * sizeof(double));
-  
-  // ..........................................................................
-  // Prefetch the data to the GPU
-  int device = -1;
-  cudaGetDevice(&device);
-  cudaMemPrefetchAsync(x, N * N * sizeof(double), device, NULL);
-  cudaMemPrefetchAsync(y, N * N * sizeof(double), device, NULL);
-  cudaMemPrefetchAsync(ans, N * N * sizeof(double), device, NULL);
-  
+
   // ..........................................................................
   // initialize x,y and ans arrays on the host
-  init<<<numBlocks,blockSize>>>(N, x, y, ans);
-  
+  for (int i = 0; i < N; i++) {
+    for(int j = 0; j < N; j++) {
+      x[i*N+j] = 5;
+      y[i*N+j] = (i==j?1:0);
+      ans[i*N+j] = (double)0.000000000000;
+    }
+  }
+
   // ..........................................................................
   double avg=0;
-  std::cout<<"Starting optimized GPU computation"<<std::endl;
+  int blockSize = 256;  // number of threads per block *********************************************** added by Stephen Devaney in part 3
+  int numBlocks = (N+blockSize-1) / blockSize;  // number of blocks *********************************************** added by Stephen Devaney in part 3
+  std::cout<<"Starting unoptimized GPU computation"<<std::endl;
   // Run kernel on GPU
   for(int i = 0; i <= iter; i++) {
     t = clock();

@@ -1,28 +1,28 @@
-==21006== NVPROF is profiling process 21006, command: ./matrixMul_gpu_p3.exe
+==8097== NVPROF is profiling process 8097, command: ./matrixMul_gpu_p3.exe
 Size of matrix (N) is 512 by 512.
 Starting unoptimized GPU computation
-It took 103.527667 ms on avg.
+It took 22.347333 ms on avg.
 RUN OK.
-==21006== Profiling application: ./matrixMul_gpu_p3.exe
-==21006== Profiling result:
+==8097== Profiling application: ./matrixMul_gpu_p3.exe
+==8097== Profiling result:
             Type  Time(%)      Time     Calls       Avg       Min       Max  Name
- GPU activities:  100.00%  416.14ms         4  104.04ms  103.70ms  105.01ms  GPUmatmul(int, double*, double*, double*)
-      API calls:   60.18%  416.15ms         4  104.04ms  103.71ms  105.01ms  cudaDeviceSynchronize
-                   39.64%  274.13ms         3  91.377ms  10.705us  274.05ms  cudaMallocManaged
-                    0.08%  570.96us         1  570.96us  570.96us  570.96us  cuDeviceTotalMem
-                    0.06%  423.24us         3  141.08us  110.73us  173.17us  cudaFree
-                    0.02%  165.80us       101  1.6410us     119ns  68.521us  cuDeviceGetAttribute
-                    0.01%  61.608us         4  15.402us  6.7130us  37.034us  cudaLaunchKernel
-                    0.00%  25.448us         1  25.448us  25.448us  25.448us  cuDeviceGetName
-                    0.00%  2.4060us         1  2.4060us  2.4060us  2.4060us  cuDeviceGetPCIBusId
-                    0.00%  1.0960us         3     365ns     170ns     735ns  cuDeviceGetCount
-                    0.00%     854ns         2     427ns     172ns     682ns  cuDeviceGet
-                    0.00%     283ns         1     283ns     283ns     283ns  cuDeviceGetUuid
+ GPU activities:  100.00%  90.821ms         4  22.705ms  22.376ms  23.686ms  GPUmatmul(int, double*, double*, double*)
+      API calls:   77.71%  321.14ms         3  107.05ms  35.687us  321.03ms  cudaMallocManaged
+                   21.98%  90.831ms         4  22.708ms  22.379ms  23.689ms  cudaDeviceSynchronize
+                    0.14%  580.34us         1  580.34us  580.34us  580.34us  cuDeviceTotalMem
+                    0.11%  449.87us         3  149.96us  120.57us  190.41us  cudaFree
+                    0.04%  147.86us       101  1.4630us     117ns  61.991us  cuDeviceGetAttribute
+                    0.01%  59.156us         4  14.789us  5.5090us  38.898us  cudaLaunchKernel
+                    0.01%  25.661us         1  25.661us  25.661us  25.661us  cuDeviceGetName
+                    0.00%  2.0810us         1  2.0810us  2.0810us  2.0810us  cuDeviceGetPCIBusId
+                    0.00%     901ns         3     300ns     134ns     617ns  cuDeviceGetCount
+                    0.00%     733ns         2     366ns     136ns     597ns  cuDeviceGet
+                    0.00%     210ns         1     210ns     210ns     210ns  cuDeviceGetUuid
 
-==21006== Unified Memory profiling result:
+==8097== Unified Memory profiling result:
 Device "Tesla V100-PCIE-32GB (0)"
    Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
-      29  143.45KB  4.0000KB  0.9961MB  4.062500MB  418.4320us  Host To Device
-      12  170.67KB  4.0000KB  0.9961MB  2.000000MB  168.3840us  Device To Host
-      10         -         -         -           -  1.297664ms  Gpu page fault groups
+      26  160.00KB  4.0000KB  0.9961MB  4.062500MB  400.7360us  Host To Device
+      12  170.67KB  4.0000KB  0.9961MB  2.000000MB  168.5440us  Device To Host
+      13         -         -         -           -  1.654080ms  Gpu page fault groups
 Total CPU Page faults: 24

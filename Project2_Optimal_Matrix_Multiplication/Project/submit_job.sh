@@ -13,9 +13,9 @@
 RUN_CPU=false
 RUN_GPU_P1=false
 RUN_GPU_P2=false
-RUN_GPU_P3=false
+RUN_GPU_P3=true
 RUN_GPU_P3_V2=false
-RUN_GPU_P4=true
+RUN_GPU_P4=false
 versions=()
 
 

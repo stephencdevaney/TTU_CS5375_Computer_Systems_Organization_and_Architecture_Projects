@@ -17,8 +17,7 @@
 #include <stdlib.h>
 
 // ------------------------------------------------------------------ GPUmatmul
-__global__
-void GPUmatmul(int N, double *x, double *y, double *ans){
+__global__ void GPUmatmul(int N, double *x, double *y, double *ans){
   int t = threadIdx.x;  // thread number of a thread inside of a particular block *********************************************** added by Stephen Devaney in part 2
   int T = blockDim.x;  // total number of threads per block *********************************************** added by Stephen Devaney in part 2
   for(int i = t; i < N * N; i+=T){  // *********************************************** modified by Stephen Devaney in part 2
