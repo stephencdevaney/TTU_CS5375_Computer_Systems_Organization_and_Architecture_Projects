@@ -1,10 +1,10 @@
 all: matrixMul_cpu matrixMul_gpu_p1
 
 matrixMul_cpu:
-	g++ $<.cpp -o $<.exe
+	g++ $@.cpp -o $@.exe
 
 matrixMul_gpu_p1:
-	nvcc $<.cu -o $<.exe
+	nvcc $@.cu -o $@.exe
 
 clean:
-	rm -rf *.exe
+	rm *.exe
