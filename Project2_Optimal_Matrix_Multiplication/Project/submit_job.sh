@@ -21,10 +21,10 @@ if [[ $RUN_CPU == true ]] ; then
 	{ time ./matrixMul_cpu.exe; } &> matrixMul_cpu.txt
 fi
 if [[ $RUN_GPU_P1 == true ]] ; then
-	versions+="matrixMul_gpu_p1"
+	versions+=("matrixMul_gpu_p1")
 fi
 if [[ $RUN_GPU_P2 == true ]] ; then
-        versions+="matrixMul_gpu_p2"
+	versions+=("matrixMul_gpu_p2")
 fi
 
 
@@ -35,6 +35,3 @@ done
 
 make clean
 rm *.err *.out
-
-#nvcc add_v5.cu -o add_v5.exe
-#nvprof ./add_v5.exe
