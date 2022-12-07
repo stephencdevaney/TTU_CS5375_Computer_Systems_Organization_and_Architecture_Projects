@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=CS5375_eraider_ID
+#SBATCH --job-name=matrixMul
 #SBATCH --output=%j.%N.out
 #SBATCH --error=%j.%N.err
 #SBATCH --partition=matador
@@ -9,18 +9,26 @@
 #SBATCH --account=cs5375
 #SBATCH --reservation=cs5375_gpu
 
-RUN_CPU=false
-RUN_GPU_P1=false
+RUN_CPU=true
+RUN_GPU_P1=true
+versions=()
 
-#array=()
+module load gcc cuda
+
 if [[ $RUN_CPU == true ]] ; then
-	echo "RUN CPU"
+	make matrixMul_cpu
+	time ./matrixMul_cpu.exe &> matrixMul_cpu.txt
 fi
-if [[ RUN_GPU_P1 == true ]] ; then
-	echo "RUN GPU P1"
+if [[ $RUN_GPU_P1 == true ]] ; then
+	versions+="matrixMul_gpu_p1"
 fi
 
-#module load gcc cuda
+for i in ${!versions[@]}; do
+	make ${versions[$i]}
+	time ./${versions[$i]}.exe &> ${versions[$i]}.txt
+done
+
+make clean
 
 #nvcc add_v5.cu -o add_v5.exe
 #nvprof ./add_v5.exe
