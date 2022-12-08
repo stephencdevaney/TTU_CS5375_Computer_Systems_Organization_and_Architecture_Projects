@@ -57,7 +57,7 @@ This file is provides optimization to matrixMul_gpu_p2.cu by modifing the number
   * With profiler: nvprof  ./matrixMul_gpu_p4.exe
   
 ### submit_job.sh
-Bash script file to submit jobs on a system utlizing SLURM. Variables in the top of the file can be change to true in order to run different version of the Matrix Multiplicaion Kernel. This file will build all versions that the user defined using the provided Makefile. Makefile is require for this submission script.
+Bash script file to submit jobs on a TTU's HPCC system utlizing SLURM. Can be used on other SLURM systems with script modification. Variables in the top of the file can be change to true in order to run different version of the Matrix Multiplicaion Kernel. This file will build all versions that the user defined using the provided Makefile. Makefile is require for this submission script.
 * Usage: sbatch submit_job.sh
 
 ### Makefile
